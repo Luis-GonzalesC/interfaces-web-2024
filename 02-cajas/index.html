@@ -1,0 +1,106 @@
+<!--  Ejercicio Resumen - Cajas / Animaciones y Transiciones
+1.- Crear estructura html que cuente con un Contenedor General, cabecera, menú, 
+barra lateral, sección de contenido principal, elementos dentro del contenedor 
+principal y footer 
+2.- Todo el contenido debe estar dentro del contenedor general y su ancho será 
+de 1200px
+3.- Header debe ocupar el 100% del ancho y tener un texto grande.
+4.- Menú debe tener los elementos uno al lado del otro. Debe disponer de un menú desplegable en diversos elementos.
+5.- El contenido principal debe tener un ancho del 70%. 
+6.- El contenido dentro del contenedor principal debe ser una cuadrícula
+con cuatro líneas de 2 cajas.
+7.- La barra lateral debe tener un ancho del 30%
+8.- El footer debe tener un ancho del 100% y estar al final del todo.
+Aspectos adicionales:
+- Caja Libre 1 y 2 (repasar z-index)
+- Caja Fija a la izquierda
+- Animaciones y Transiciones (formulario y caja) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación - Modelo Cajas</title>
+    <!-- Linkeamos estilos -->
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+    <!-- 1.- Crear estructura html que cuente con un Contenedor General, cabecera, menú, 
+    barra lateral, sección de contenido principal, elementos dentro del contenedor 
+    principal y footer -->
+    <main class="container">
+        <!-- cabezara -->
+        <header class="header">
+            <h1 class="header__title">Modelo de Cajas</h1>
+            <h2 class="header__subtitle">CSS Avanzado</h2>
+        </header>
+        <!-- Barra de navegación -->
+        <nav class="navbar">
+            <ul class="navbar__list">
+                <li class="list__item"><a href="#">Inicio</a></li>
+                <li class="list__item"><a href="#">Contenido</a>
+                    <ul class="item__sublist">
+                        <li class="sublist__item"><a href="#">Peliculas</a></li>
+                        <li class="sublist__item"><a href="#">Juegos</a></li>
+                    </ul>
+                </li>   
+                <li class="list__item"><a href="#">Blog</a>
+                    <ul class="item__sublist">
+                        <li class="sublist__item"><a href="#">Peliculas</a></li>
+                        <li class="sublist__item"><a href="#">Juegos</a></li>
+                    </ul>
+                </li>
+                <li class="list__item"><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <!-- Fin barra de navegacion -->
+        <!-- inicio seccion principal -->
+        <section class="content">
+            <h1 class="conten__title">Contenido Principal - Cajas</h1>
+            <div class="content__box">
+                <p class="box__info">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, dolore optio fugit quasi porro doloremque, nobis vitae repudiandae aperiam itaque molestiae ut velit dicta! Dolorum aperiam eligendi perspiciatis? Fugiat deserunt officiis impedit doloribus at illo et! Ea, porro! Repellat placeat sapiente natus quae? Velit, suscipit eos. Dolore vel labore autem.
+                </p>
+            </div>
+            <div class="content__box">
+                <p class="box__info">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, dolore optio fugit quasi porro doloremque, nobis vitae repudiandae aperiam itaque molestiae ut velit dicta! Dolorum aperiam eligendi perspiciatis? Fugiat deserunt officiis impedit doloribus at illo et! Ea, porro! Repellat placeat sapiente natus quae? Velit, suscipit eos. Dolore vel labore autem.
+                </p>
+            </div>
+            <div class="content__box">
+                <p class="box__info">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, dolore optio fugit quasi porro doloremque, nobis vitae repudiandae aperiam itaque molestiae ut velit dicta! Dolorum aperiam eligendi perspiciatis? Fugiat deserunt officiis impedit doloribus at illo et! Ea, porro! Repellat placeat sapiente natus quae? Velit, suscipit eos. Dolore vel labore autem.
+                </p>
+            </div>
+            <div class="content__box">
+                <p class="box__info">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, dolore optio fugit quasi porro doloremque, nobis vitae repudiandae aperiam itaque molestiae ut velit dicta! Dolorum aperiam eligendi perspiciatis? Fugiat deserunt officiis impedit doloribus at illo et! Ea, porro! Repellat placeat sapiente natus quae? Velit, suscipit eos. Dolore vel labore autem.
+                </p>
+            </div>
+        </section>
+        <!-- caja lateral -->
+        <aside class="sidebar">
+            <h2 class="sidebar__title">Caja lateral</h2>
+            <p class="sidebar__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugit assumenda ad doloribus obcaecati ex, vero, dolore dicta maxime temporibus ea nostrum voluptatum veniam molestiae necessitatibus porro, dignissimos impedit perspiciatis! Impedit earum sequi architecto saepe labore expedita placeat culpa, sint modi cum aliquid velit aspernatur odio quisquam dolores assumenda officia?
+            </p>
+            <p class="sidebar__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugit assumenda ad doloribus obcaecati ex, vero, dolore dicta maxime temporibus ea nostrum voluptatum veniam molestiae necessitatibus porro, dignissimos impedit perspiciatis! Impedit earum sequi architecto saepe labore expedita placeat culpa, sint modi cum aliquid velit aspernatur odio quisquam dolores assumenda officia?
+            </p>
+            <p class="sidebar__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugit assumenda ad doloribus obcaecati ex, vero, dolore dicta maxime temporibus ea nostrum voluptatum veniam molestiae necessitatibus porro, dignissimos impedit perspiciatis! Impedit earum sequi architecto saepe labore expedita placeat culpa, sint modi cum aliquid velit aspernatur odio quisquam dolores assumenda officia?
+            </p>
+            <p class="sidebar__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugit assumenda ad doloribus obcaecati ex, vero, dolore dicta maxime temporibus ea nostrum voluptatum veniam molestiae necessitatibus porro, dignissimos impedit perspiciatis! Impedit earum sequi architecto saepe labore expedita placeat culpa, sint modi cum aliquid velit aspernatur odio quisquam dolores assumenda officia?
+            </p>
+            <p class="sidebar__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugit assumenda ad doloribus obcaecati ex, vero, dolore dicta maxime temporibus ea nostrum voluptatum veniam molestiae necessitatibus porro, dignissimos impedit perspiciatis! Impedit earum sequi architecto saepe labore expedita placeat culpa, sint modi cum aliquid velit aspernatur odio quisquam dolores assumenda officia?
+            </p>
+
+            <footer class="foot">
+                Todos los derechos reservados &copy; Luis Guillermo Gonzales Carrillo
+            </footer>
+        </aside>
+    </main>
+</body>
+</html>
