@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.website{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 120px 70px 2fr 70px;
+
+    grid-template-areas: 
+        "cabecera cabecera cabecera cabecera cabecera"
+        "menu menu menu menu menu"
+        "contenido contenido contenido contenido lateral"
+        "footer footer footer footer footer";
+}

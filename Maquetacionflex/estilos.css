@@ -54,7 +54,6 @@
     /* Añadir aquí Flex */
     /* display: flex; */
     /*codigo jose*/
-
     height: 100%;
 }
 .menu__list{
@@ -84,9 +83,12 @@
     background-color: #ccc;
     color: white;
 }
+
 /* contenido */
 .content{
     /* Añadir aquí Flex y Align y/o justify */
+    display: flex;
+    flex-direction: row;
 
 
     margin-top: 20px;
@@ -94,11 +96,18 @@
 }
 .content__projects{
     /* Añadir aquí Flex y Align y/o justify */
-
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 
 }
 .projects__project{
     /* Añadir aquí Flex */
+    display: flex;
+    flex-direction: column;
+    width: 23%;
 
 
     margin-bottom: 25px;
@@ -135,7 +144,9 @@
 /* barra lateral */
 .content__lateral{
     /* Añadir aquí Flex */
-
+    display: flex;
+    flex-direction: column;
+    width: 18%;
 
     margin-right: 30px;
     padding: 15px;
@@ -182,14 +193,18 @@
 /* Footer */
 .content__footer{
     /* Añadir aquí Flex y Align y/o justify */
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     height: 120px;
     border-top: 1px solid rgba(226,225,226, 0.8);
 }
 .footer__logoFooter{
     /* Añadir aquí Flex y order */
-
+    display: flex;
+    flex-direction: row;
+    order: 2;
 
     padding: 10px;
     margin-left: 20px;
@@ -207,6 +222,8 @@
 
 .footer__info{
     /* Añadir aquí Flex y Order */
+    display: flex;
+    order: 1;
 
     opacity: 0.7;
     margin-left: 20px;
