@@ -228,3 +228,55 @@
     opacity: 0.7;
     margin-left: 20px;
 }
+
+/* @media (max-width: 1293px) {
+    body{
+        background-color: green;
+    }
+    
+    .content__projects{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        flex-basis: calc(100% / 3);
+    }
+    .projects__project{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    
+    
+        margin-bottom: 25px;
+        margin-right: 20px;
+        border: 1px solid #ccc;
+    }
+} */
+
+@media (max-width: 1293px) {
+    body{
+        background-color: antiquewhite;
+    }
+
+    .header__menu{
+        display: flex;
+        flex-direction: column;
+        -ms-flex-direction: column;
+    }
+    .menu__list{
+        /* Añadir aquí Flex y Align y/o justify */
+        display: flex;
+
+    }
+
+    .content__projects{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .projects__project{
+        display: flex;
+        flex-basis: calc(100% / 3 - 22px);
+
+    }
+}

@@ -17,4 +17,77 @@ body{
         "menu menu menu menu menu"
         "contenido contenido contenido contenido lateral"
         "footer footer footer footer footer";
+
+    grid-column-gap: 10px;
+    width: 80%;
+    /* height: 100%; */
+    height: 95vh; /*Esta medida es el 100% de la anchura de nuestro navegador*/
+    margin: 0px auto;
+    border: 1px solid black;
+}
+
+.website__header{
+    grid-area: cabecera;
+    /*Estrategia para centrar el contenido*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.website__menu{
+    grid-area: menu;
+    background-color: blue;
+    color: white;
+    line-height: 70px;
+}
+
+.menu__list{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    list-style: none; /*Eso para quitar los puntos*/
+
+}
+
+.list__item a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+.website__content{
+    grid-area: contenido;
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: beige;
+
+    /*====FORMA FLEX====*/
+    /* display: flex;
+    flex-wrap: wrap; */
+
+    /*====FORMA GRID====*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.content__article{
+    /*====FORMA FLEX====*/
+    /*Esto para poner dentro de mi caja 4 articulos*/
+    /* display: flex; */
+    /* flex-basis: 25%; es lo mismo =>calc(100% /4) */
+    /* flex-basis: calc(100% / 4 - 20px); */
+    border: 1px solid black;
+}
+
+.website__sidebar{
+    grid-area: lateral;
+    background-color: antiquewhite;
+}
+
+.website__footer{
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
