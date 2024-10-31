@@ -8,7 +8,7 @@
     --color-secondary: #fff;
     --color-banner: #2522BA;
     --color-text-btn: #0d6efd;
-    --colog-bg-btn: #ffdc60;
+    --color-bg-btn: #ffdc60;
     --color-subtitle: #c75c6f;
     --color-title: #292930;
     --color-bg-services: #f8f8f8;
@@ -106,7 +106,7 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     background-color: var(--color-primary);
     position: absolute;
     bottom: 1.2rem;
-    left: 0;
+    /* left: 0; */
     opacity: 0;
     transition: all 300ms linear;
 }
@@ -117,7 +117,11 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 
 .nav__submenu{
     /* position */
-    
+    display: block;
+    position: absolute;
+
+    top: 100%;
+    left: 2rem;
     
     min-width: 19rem;
     padding: 1.5rem 1rem;
@@ -125,18 +129,38 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     box-shadow: 0px 13px 48px 0 rgba(0,0,0,15%);
     
     /* visibility, opacity y efecto */
-
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms ease-in-out;
 }
 
 .submenu__item{
     /* efecto */ 
+    opacity: 0;
+    transform: translateX(3rem);
+    transition: all 300ms ease-in-out;
 }
-
 /* efecto */
-
+.submenu__item:nth-child(1){
+    transition-delay: 100ms;
+}
+.submenu__item:nth-child(2){
+    transition-delay: 200ms;
+}
+.submenu__item:nth-child(3){
+    transition-delay: 300ms;
+}
+.submenu__item:nth-child(4){
+    transition-delay: 400ms;
+}
+.submenu__item:nth-child(5){
+    transition-delay: 500ms;
+}
 
 .submenu__title{
     /* position */ 
+    position: relative;
+
     font-size: 1.4rem;
     text-transform: capitalize;
     text-decoration: none;
@@ -144,18 +168,49 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     color: var(--color-text-body);
     padding: 0.7rem 1.5rem;
     /* efecto */
-
+    transition: all 300ms ease-in-out;
 }
 
 /* efectos varios */
+.nav__item:hover > .nav__submenu{
+    opacity: 1;
+    visibility: visible;
+    z-index: 99;
+    left: 0;
+}
+.nav__item:hover > .nav__submenu >.submenu__item{
+    /*efecto*/
+    opacity: 1;
+    transform: translateX(0);
+}
 
 
+.submenu__title:hover{
+    color: var(--color-primary);
+    transform: scale(1.1);
+}
+
+.submenu__title::before{
+    content: "";
+    height: 0.2rem;
+    width: 0;
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: 0.1rem;
+    opacity: 0;
+    transition: all 300ms linear;
+}
+
+.submenu__title:hover::before{
+    width: 85%;
+    opacity: 1;
+}
 
 
 /* Estilos para el Banner */
 .layout__banner{
     /* position */
-
+    position: relative;
     min-height: 60rem;
     /*border: 2px solid red; */
     margin: 0 3rem;
@@ -170,7 +225,8 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .banner__content{
     /* position */
-
+    position: relative;
+    display: inline-block;
 
     width: 50%;
     padding: 0 1.5rem;
@@ -193,30 +249,106 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     text-align: center;
     box-shadow: 0px 45px 70px -25px var(--color-primary);
     /* efecto */
+    transition: all 300ms ease-in-out;
 }
 /* efecto */
-
+.banner__btn:hover{
+    background-color: var(--color-bg-btn);
+    color: var(--color-bg-dark);
+    /* sombra */
+    box-shadow: 2px 2px 8px 0 var(--color-bg-btn), 4px 4px 24px 0 black, 0px 0px 48px 2px yellow;
+}
 
 .shapes__item{
     /* position y z-index */
-    
+    position: absolute;
+    z-index: 2;
     pointer-events: none;
 }
 .shapes__item--shape1{
     /* position y animación */
+    top: 0;
+    right: 0;
+    animation-name: muestraDerecha;
+    animation-duration: 2s;
+}
+
+@keyframes muestraDerecha {
+    0%{
+        transform: translateX(50%);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+    
 }
 
 .shapes__item--shape2{
     /* position y animación */
+    bottom: 0;
+    left: 0;
+    animation-name: muestraIzquierda;
+    animation-duration: 2s;
+}
+
+@keyframes muestraIzquierda {
+    0%{
+        transform: translateX(-50%);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+    
 }
 
 .shapes__item--shape3{
     /* position y animación */
+    top: 34%;
+    left: 50%;
+    animation: mueveShape3 15s infinite;
+}
+
+@keyframes mueveShape3 {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    35%{
+        transform: translateX(50px) translateY(-200px);
+    }
+    70%{
+        transform: translateX(800px);
+    }
+    100%{
+        transform: translateX(0) translateY(0);
+    }
+    
 }
 
 .shapes__item--shape4{
     /* position y animación */
+    right: 50%;
+    animation: mueveShape4 25s infinite;
 }
+
+@keyframes mueveShape4 {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    35%{
+        transform: translateX(-200px);
+    }
+    40%{
+        transform: translateY(-350px);
+    }
+    70%{
+        transform: translateX(250px);
+    }
+    100%{
+        transform: translateX(0) translateY(0);
+    }
+    
+}
+
 .shapes__item--shape4 .shapes__img{
     opacity: 0.5;
     width: 7.5rem;
@@ -225,18 +357,76 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 
 .shapes__item--shape5{
     /* position y animación */
+    opacity: 0.7;
+    top: 10%;
+    left: 10%;
+    animation: mueveShape5 10s infinite;
 }
+
+@keyframes mueveShape5 {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    35%{
+        transform: translateX(200px);
+    }
+    70%{
+        transform: translateY(250px);
+    }
+    100%{
+        transform: translateX(0) translateY(0);
+    }
+    
+}
+
 
 .shapes__item--shape6{
     /* position y animación */
+    bottom: 10%;
+    right: 50%;
+    animation: mueveShape6 10s infinite;
+
 }
+@keyframes mueveShape6 {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    35%{
+        transform: translateY(200px);
+    }
+    70%{
+        transform: translateX(-250px);
+    }
+    100%{
+        transform: translateX(0) translateY(0);
+    }
+    
+}
+
 .shapes__item--shape7{
     /* position y animación */
+    top: 0;
+    right: 10rem;
+    z-index: 1;
+    animation-name: mueveShape7;
+    animation-duration: 2s;
+}
+
+@keyframes mueveShape7 {
+    0%{
+        transform: translateY(-50%);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
 }
 
 /* Estilos sección Servicios */
 .layout__services{
     /* position y z-index */
+    position: relative;
+    z-index: 1;
 
     margin: 14rem 10rem;
     margin-bottom: 4rem;
@@ -273,13 +463,17 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .services__list{
     /* flex */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 3rem; /* separación entre los elementos */
 }
 .services__service{
     /* flex */
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
 
-    height: 100%;
+    height: 60%;
     padding: 5rem 4rem;
     margin-bottom: 4rem;
     border-radius: 3rem;
@@ -289,6 +483,11 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     border-image-source: linear-gradient(90deg, var(--color-bg-services), rgba(255,255,255,0));
     /* efecto */
 
+    transition: all 300ms linear;
+}
+
+.services__service:hover{
+    background-color: var(--color-bg-services);
 }
 
 .service__container-img{
@@ -299,6 +498,7 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 .service__content{
     /* Relacionado con flex grow y flex basis */
 }
+
 .service__title{
     color: var(--color-title);
     font-size: 2.4rem;
@@ -306,6 +506,7 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     line-height: 1.4;
     margin-bottom: 3rem;
     /* efecto */
+    transition: all 300ms ease-in-out;
 }
 .service__description{
     overflow: hidden;
@@ -314,14 +515,27 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .service__more{
     /* position */
+    position: relative;
+    display: inline-block;
 
     font-weight: 500;
     font-size: 1.7rem;
     padding-left: 5rem;
     /* efecto */
+    transition: all 300ms linear;
 }
 
-/* pseudoelemento before */
+/* pseudoelemento before service_more*/
+.service__more::before{
+    content: "";
+    width: 3.4rem;
+    height: 1.5px;
+    background-color: var(--color-text-body);
+    position: absolute;
+    left: 0;
+    bottom: 1.2rem; /*1.2rem => 50%*/
+}
+
 
 .service__more:hover,
 .service__title:hover{
@@ -333,36 +547,73 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 
 /* para generar el escalonado de las tarjetas de servicios */
 .services__service--bottom{
-    
+    margin-top: 20rem;
 }
 .services__service--middle{
-    
+    margin-top: 10rem;
 }
 .services__service--top{
-    
+    margin-top: 0rem;
 }
 
 /* coloco a las formas detrás de los servicios */
 .service-shapes__item{
     /* position y z-index */
-
+    position: absolute;
+    z-index: -1;
     pointer-events: none;
 }
 .service-shapes--shape1{
     /* position */
+    top: -10%;
+    right: 22%;
 }
 .service-shapes--shape2{
     /* position */
     opacity: 0.6;
+    top: 0%;
+    right: 30%;
 }
+
 .service-shapes--shape3{
     /* position y animación */
+    opacity: 0.4;
+    top: 27%;
+    right: 30%;
+    animation: mueveBolaRosita 10s infinite;
+}
+/* mi opcion
+@keyframes mueveBolaRosita {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    25%{
+        transform: translateY(450px);
+    }
+    50%{
+        transform: translateX(250px) translateY(450px);;
+    }
+    70%{
+        transform: translateX(350px) translateY(150px);
+    }
+    100%{
+        transform: translateX(0) translateY(0);
+    }
+}*/
 
+/*Opcion manu*/
+@keyframes mueveBolaRosita {
+
+    100% {
+        transform: rotate(360deg) translate(300px) rotate(-360deg) translate(-300px);
+    }
 }
 
 /* Estilos para la sección de Proyectos */
 .layout__projects{
     /* position y z-index */
+    position: relative;
+    z-index: 1;
 
     background-color: var(--color-bg-projects);
     padding: 14rem 10rem;
@@ -380,29 +631,59 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .projects__categories{
     /* Flex */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 3fr;
+    z-index: 1;
 
     gap: 7rem;
     margin-bottom: 5.5rem;
 }
 .categories__item{
     /* position */
+    position: relative;
 
     font-size: 2rem;
     font-weight: 500;
     cursor: pointer;
     padding: 0.8rem 0;
     /* efecto */ 
-
+    /* transition: all 300ms linear; */
 }
 
 .projects__all{
     /* flex */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
     gap: 4rem 7rem;
 }
 .projects__project{
-    width: calc(50% - 3.5rem); /* consigo que mis tarjetas tengan un tamaño variable. Facilita el responsive */
+    width: calc(100% - 3.5rem); /* consigo que mis tarjetas tengan un tamaño variable. Facilita el responsive */
 }
+
+/* pseudoelemento before */
+.categories__item::before{
+    content: "";
+    position: absolute;
+    bottom: 0.8rem;
+    height: 0.2rem;
+    width: 0%;
+    background-color: var(--color-primary);
+    transition: all 300ms linear;
+    opacity: 0;
+    left: 0;
+}
+
+.categories__item:hover::before{
+    opacity: 1;
+    width: 100%;
+}
+
+/* .categories__item--active,
+.categories__item:hover{
+    border-bottom: 3px solid var(--color-primary);
+} */
+
 .project__container-img{
     width: 100%;
     border-radius: 3rem 3rem 0 0;
@@ -411,7 +692,11 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 .project__img{
     width:100%;
     /* efecto */
+    transition: all 2s ease-in-out;
+}
 
+.projects__project:hover .project__img{
+    transform: scale(1.2);
 }
 
 .project__content{
@@ -426,6 +711,11 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     color: var(--color-title);
     margin-bottom: 1rem;
     /* efecto */
+    transition: all 300ms linear;
+}
+
+.project__title:hover{
+    color: var(--color-banner);
 }
 
 .project__tags{
@@ -433,26 +723,43 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .project-shapes__item{
     /* position y z-index */
-
+    position: absolute;
+    z-index: -1;
     pointer-events: none;
 }
+
 .project-shapes--shape1{
-    /* position */
-    
+    top: 4%;
+    right: 11%;
     opacity: 0.5;
 }
 .project-shapes--shape2{
-    /* position */
-
+    top: 8%;
+    right: 35%;
     opacity: 0.5;
-    /* animación */
-
+    animation: moveShape7 40s infinite;
 }
 .project-shapes--shape3{
-    /* position */
-
+    top: 90px;
+    right: 200px;
     opacity: 0.8;
-    /* animación */
+    animation: moveShape7 40s infinite;
+    -webkit-animation: moveProjectShape 40s infinite;
+}
+
+@keyframes moveProjectShape{
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    35%{
+        transform: translateX(150px) translateY(-50px);
+    }
+    70%{
+        transform: translateX(-50px) translateY(100px);
+    }
+    100%{
+        transform: translateX(0) translateY(0);
+    }
 }
 
 /* Estilos para estadísticas y Mejores clientes */
@@ -484,17 +791,24 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .stats__progress{
     /* Flex */
-    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
     gap: 3rem;
 }
 .stats__stat{
-    width: 25%;
+    /* width: 25%; */
     text-align: center;
     padding: 7rem 2rem;
     border-radius: 2rem;
     border: 1px solid transparent; /* inapreciable */
 }
 /* efecto */
+.stats__stat:hover{
+    background: linear-gradient(180deg,var(--color-bg-dark),grey);
+    border: 1px solid var(--color-hover-dark);
+}
+
 
 .stat__icon>img{
     margin: 0 auto;
@@ -519,6 +833,8 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 /* Estilos para Reseñas */
 .layout__reviews{
     /* position y z-index */
+    position: relative;
+    z-index: 1;
 
     padding-top: 7rem;
     padding-bottom: 5rem;
@@ -540,14 +856,19 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     width: 50%;
     font-size: 2rem;
 }
+
 .reviews__content{
     /* Flex + align */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 
     gap: 2rem;
 }
 .reviews__review{
     padding-top: 2rem;
     padding-bottom: 2rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 .review__company{
     display: inline-block;
@@ -560,13 +881,14 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     margin-bottom: 4rem;
 }
 .review__author{
-    /* Flex */
-
+    /* GRID */
+    display: grid;
+    grid-template-columns: 1fr 9fr;
 }
 .author__container-img{
     border-radius: 90px;
     overflow: hidden;
-    width:10%;
+    /* width:10%; */
 }
 .author__name{
     display: block; /* creo un salto de línea */
@@ -586,12 +908,23 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 .review-shapes__item{
     /* position + z-index */
     pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    top: 10%;
+    right: 14%;
+    opacity: 0.5;
+}
+
+.review__img{
+    width: 50px;
+    height: 50px;
 }
 
 /* Estilos zona Mejores Clientes */
 .layout__clients{
     /* position + z-index */
-
+    position: relative;
+    z-index: 1;
 }
 .clients__header{
     text-align: left;
@@ -609,9 +942,16 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .clients__logos{
     /* Flex */
-
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
 }
+
+/*No funciona*/
+/* .clients__logos > .clients__item:nth-child(2) > .clients__img{
+    align-items: center;
+} */
+
 .clients__item{
     /* Flex-basis */
 
@@ -620,16 +960,28 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     filter: grayscale(25%);
     opacity: 0.5;
     /* efecto */
+    transition: all 500ms ease-in-out;
+}
+
+.clients__item:hover >.clients__img{
+    filter: grayscale(0%);
+    opacity: 1;
+    cursor: pointer;
 }
 
 .client-shapes__item{
     /* position + z-index */
-
+    position: absolute;
+    z-index: 0;
+    top: 25%;
+    right: 0;
 }
 
 /* Estilos últimas noticias */
 .layout__news{
     /* position + z-index */
+    position: relative;
+    z-index: 1;
 
     padding: 14rem 0;
 }
@@ -651,9 +1003,13 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .news__list{
     /* Flex */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 .news__new{
     /* Flex + align */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
     gap: 2rem;
     padding-top: 4rem;
@@ -663,22 +1019,59 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     border-top: 1px solid var(--color-borders);
     border-bottom: 1px solid var(--color-borders);
     /* efecto */
+    transition: all 300ms ease-in-out;
+}
 
+.news__new:hover{
+    border-top-color: var(--color-primary);
+}
+
+/*Efecto para el titulo*/
+.new__title::before{
+    content: "";
+    width: 3.4rem;
+    height: 1.5px;
+    background-color: var(--color-text-body);
+    position: absolute;
+    left: 0;
+    bottom: 1.2rem; /*1.2rem => 50%*/
+}
+.new__title:hover{
+    color: var(--color-primary);
+}
+/*Efecto para el new_more (leer más)*/
+.new__more::before{
+    content: "";
+    width: 3.4rem;
+    height: 1.5px;
+    background-color: var(--color-text-body);
+    position: absolute;
+    left: 0;
+    bottom: 1.2rem; /*1.2rem => 50%*/
+}
+
+.new__more:hover{
+    color: var(--color-primary);
 }
 
 .news__new:last-child{
     border-left: 1px solid var(--color-borders);
     padding-left: 2.5rem;
 }
+
+/*IMAGENES*/
 .news__container-img{
     overflow: hidden;
     border-radius: 3rem;
 }
+
 .new__img{
     border-radius: 3rem;
-
     /* efecto */
-
+    transition: all 300ms ease-in-out;
+}
+.news__new:hover .new__img{
+    transform: scale(1.2);
 }
 
 .new__content{
@@ -718,7 +1111,6 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .new-shapes--shape1{
     /* position */
-
     opacity: 0.7;
 }
 .new-shapes--shape2{
