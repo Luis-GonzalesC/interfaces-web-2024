@@ -53,7 +53,7 @@ body{
     background: url("../img/pattern.png");
 }
 /* wrap queremos que los elementos "hijos" dispongan de estos estilos */
-.header__wrap, .content__wrap, .footer__wrap{
+.header__wrap, .content__wrap, .footer__wrap, .header__var{
     /* le asignamo 1200 para vista de escritorio */
     width: var(--mx-width);
     margin: 0px auto; /* centra un elemento */
@@ -72,8 +72,20 @@ body{
     color: var(--color-text-white);
 }
 
+/*AGREGADO POR MI 
+LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
+(CAMBIADO)*/
+.header__wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*CAMBIADO*/
 .header__logo{
-    float: left;
+    /* float: left; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
     width: 200px;
     height: 50px;
     background-color: var(--color-primary);
@@ -88,10 +100,11 @@ body{
 }
 
 .header__logo h3{
-    display: block;
-    float: right;
-    font-size: 40px;
-    margin-right: 65px;
+    /* display: block; */
+    /* float: right; */
+    font-size: 30px;
+    margin-top: 4px;
+    margin-right: 10px;
     /* transición */
     transition: all 500ms;
 }
@@ -121,25 +134,26 @@ body{
 
 /* efecto hover en Logo */
 .logo__gear{
-    display: block;
-    float: left;
+    /* float: left; */
     font-size: 30px;
-    margin-top: 4px;
-    margin-left: 26px;
+    margin-top: 0px;
+    margin-left: 10px;
 
     /* A la hora de crear animación */
     animation-name: giroRueda;
-    animation-duration: 4s;
-    animation-timing-function: linear; /*Para que el giro sea constante*/
-    animation-iteration-count: infinite; /*Las veces que quiero que se repita*/
+    animation-duration: 2s;
+    /* animation-timing-function: linear; Para que el giro sea constante */
+    /* animation-iteration-count: infinite; Las veces que quiero que se repita */
     /*Equivalente a => animation: giroRueda 4s linear infinite;*/
 }
 
 /* animación logo rueda */
 @keyframes giroRueda{
-    100% {
-        /* transform: rotate(360deg); */
-        transform: rotateZ(360deg);
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
     }
 }
 
@@ -157,21 +171,26 @@ body{
     }
 }
 
-
+/*CAMBIADO*/
 .header__menu{
-    float: right;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: right;
+
+    /* float: right; */
     height: 70px;
     background: transparent;
 }
 .list__item{
     font-size: 24px;
-    display: inline-block; /* puedo flotar con el float o bien mediante inline-block. Funcionaría igual */
+    display: inline-block;
+    /* puedo flotar con el float o bien mediante inline-block. Funcionaría igual */
     margin: 0px 20px 0px 20px;
     letter-spacing: 1px;
     line-height: 70px;
 }
 .list__item a{
-    display:block;
+    /* display:block; */
     color: var(--color-text-white);
     text-decoration: none;
     /* transición */
@@ -183,8 +202,43 @@ body{
     transform: scale(1.1);
 }
 
+/*Maquetando el login y el buscador*/
+.header__var{
+    position: relative;
+}
+.var__login {
+    position: absolute;
+    left: 3%;
+}
+.var__login input{
+    margin: 10px;
+    width: 100px;
+    height: 25px;
+    background-color: var(--color-primary);
+    box-shadow: 2px 2px 3px var(--color-text-title);
+}
+.var__search{
+    position: absolute;
+    right: 3%;
+}
+.var__search input{
+    margin: 10px;
+    width: 20rem;
+    height: 25px;
+}
+
+/*Efecto hover en los botones del login*/
+.var__login input:hover{
+    border-radius: 5px;
+    background-color: var(--color-background);
+    color: black;
+    transform: scale(1.1);
+}
 
 /* Maquetando el Banner */
+.content__wrap{
+    margin-top: 4rem;
+}
 .content__banner{
     width: 95.5%;
     height: 100px;
@@ -241,8 +295,13 @@ body{
 }
 
 /* Tarjetas */
+.content__cards{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
 .cards__card{
-    float: left;
+    /* float: left; */
     width: 200px;
     height: 260px;
     border: 1px solid var(--color-background);
@@ -261,12 +320,14 @@ body{
     color: white;
 }
 
+/*efecto hover en la carta modificamos card__icon */
 .cards__card:hover .card__icon{
     font-size: 60px;
     color: var(--color-primary);
     animation: mueveIcono 500ms linear;
 }
 
+/* keyframes */
 @keyframes mueveIcono{
     from{
         transform: translateY(-100%);
@@ -289,9 +350,7 @@ body{
     text-align: center;
     margin: 0px auto;
 }
-/*efecto hover en la carta modificamos card__icon */
 
-/* keyframes */
 
 .card__category{
     width: 100%;
@@ -352,8 +411,8 @@ body{
     min-height: 1070px;
     font-family: "TrebuchetMS";
     float: right;
-    margin: 20px;
 }
+
 .lateral__title{
     display: block;
     width: auto;
@@ -450,13 +509,18 @@ body{
     margin-top: 22px;
     font-size: 20px;
 }
-
+/*Div creado para la barra lateral sobre el menu*/
+.lateral__login__button{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-right: 5rem;
+}
 .lateral__login input[type="submit"],
 .lateral__login input[type="button"],
 .lateral__login input[type="reset"],
 .lateral__login button{
-    /* display: block; */
-    float: left;
+    display: block;
+    /* float: left; */
     text-align: center;
     width: 100px;
     height: 35px;
@@ -530,8 +594,16 @@ body{
 
 /* Artículos */
 .content__articles{
-    float: left; /* es necesario flotarlo puesto que he incluido el div clearfix*/
+    /* float: left; es necesario flotarlo puesto que he incluido el div clearfix
+    width: 860px; */
+    display: grid;
     width: 860px;
+}
+/*DIV creado para poder gridear los section*/
+.articles__articles{
+    top: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .content__articles h2{
@@ -552,6 +624,8 @@ body{
 }
 
 .articles__article{
+    position: relative;
+
     width: 98%;
     height: auto;
     border: 1px solid var(--color-background);
@@ -577,7 +651,11 @@ body{
 }
 
 .article__datos{
-    float: right;
+    /* float: right; */
+    position: absolute;
+    right: 3.6%;/*para el toc*/
+    width: 80%;
+
     background-color: var(--color-box-shadow2);
     color: var(--color-text-white);
     height: 30px;
@@ -599,7 +677,7 @@ body{
 
 .articles__blog{
     height: 100px;
-    margin-top: 60px;
+    /* margin-top: 60px; */
     line-height: 100px;
     text-align: center;
     font-family: "BebasNeue";
@@ -625,9 +703,14 @@ body{
     color: var(--color-text-white);
     overflow: hidden;
 }
+/*FALTAAAAAAAAAAA*/
+.footer__wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 .footer__wrap > div{
-    float: left;
-    width: 25%;
+    /* float: left; */
+    width: 80%;
     height: 370px;
     margin: 40px;
     text-align: center;
@@ -670,7 +753,6 @@ body{
     /* transición */
 }
 /* efecto de hover sobre cada li */
-
 
 .content__footer iframe{
     width: 100%;

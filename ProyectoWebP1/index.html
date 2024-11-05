@@ -16,17 +16,29 @@
     <header class="header">
         <div class="header__wrap">
             <div class="header__logo"> 
-                <span class="logo__gear">S</span>
-                <h3>BLOG</h3>
+                <span class="logo__gear">
+                    <img src="img/anime_1.png" alt="Anime">
+                </span>
+                <h3>Anime</h3>
             </div>
             <nav class="header__menu">
                 <ul class="menu__list">
                     <li class="list__item"><a href="#">INICIO</a></li>
-                    <li class="list__item"><a href="#">BLOG</a></li>
-                    <li class="list__item"><a href="#">FORMACIÓN</a></li>
-                    <li class="list__item"><a href="#">CONTACTO</a></li>
+                    <li class="list__item"><a href="#">ACTORES</a></li>
+                    <li class="list__item"><a href="#">NOTICIAS</a></li>
+                    <li class="list__item"><a href="#">CONTACTOS</a></li>
                 </ul>
             </nav>
+        </div>
+
+        <div class="header__var">
+            <div class= "var__login">
+                <input type="button" value="Inicia Sesion">
+                <input type="button" value="Registrarse">
+            </div>
+            <div class= "var__search">
+                <input type="text" name="buscador" placeholder="Buscador">
+            </div>
         </div>
         
     </header>
@@ -36,7 +48,7 @@
         <section class="content__info">
             <!-- Inicio Banner -->
             <div class="content__banner">
-                <h1>Diseño de CSS por Alumn@</h1>
+                <h1>Diseño de CSS por LUIS</h1>
             </div>
             <!-- fin de Banner -->
             <!-- Inicio Tarjetas -->
@@ -96,8 +108,11 @@
                     <input type="email">
                     <label class="lateral-box__password aside-box__icon">w</label>
                     <input type="password">
-                    <input type="submit" value="Entrar">
-                    <input type="reset" value="Limpiar">
+                    <div class="lateral__login__button">
+                        <input type="submit" value="Entrar">
+                        <input type="reset" value="Limpiar">
+                    </div>
+                    
                     <a href="#">Regístrate aquí</a>
                     <a href="#">Has olvidado tu contraseña?</a>
                 </form>
@@ -132,61 +147,108 @@
         <section class="content__articles">
             <h2 class="articles__title">Últimos artículos</h2>
             <div class="clearfix"></div>
-            <article class="articles__article">
-                <div class="article__datos">
-                    <span>Fecha: 01 de enero</span>
-                    <span>Categoría: Pruebas</span>
-                </div>
-                <h4 class="article__subtitle">
-                    <a href="#">Título de artículo 1</a>
-                </h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
-            </article>
-            <article class="articles__article">
-                <div class="article__datos">
-                    <span>Fecha: 01 de febrero</span>
-                    <span>Categoría: Pruebas</span>
-                </div>
-                <h4 class="article__subtitle">
-                    <a href="#">Título de artículo 2</a>
-                </h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
-            </article>
-            <article class="articles__article">
-                <div class="article__datos">
-                    <span>Fecha: 01 de marzo</span>
-                    <span>Categoría: Pruebas</span>
-                </div>
-                <h4 class="article__subtitle">
-                    <a href="#">Título de artículo 3</a>
-                </h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
-            </article>
-            <article class="articles__article">
-                <div class="article__datos">
-                    <span>Fecha: 01 de abril</span>
-                    <span>Categoría: Pruebas</span>
-                </div>
-                <h4 class="article__subtitle">
-                    <a href="#">Título de artículo 4</a>
-                </h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
-            </article>
-            <article class="articles__article">
-                <div class="article__datos">
-                    <span>Fecha: 01 de agosto</span>
-                    <span>Categoría: Pruebas</span>
-                </div>
-                <h4 class="article__subtitle">
-                    <a href="#">Título de artículo 5</a>
-                </h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
-            </article>
+            <!-- DIV Agregador por mi -->
+            <div class="articles__articles">
+                <article class="articles__article">
+                    <div class="article__datos">
+                        <span>Fecha: 01 de enero</span>
+                        <span>Categoría: Pruebas</span>
+                    </div>
+                    <h4 class="article__subtitle">
+                        <a href="#">Título de artículo 1</a>
+                    </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                </article>
+                <article class="articles__article">
+                    <div class="article__datos">
+                        <span>Fecha: 01 de febrero</span>
+                        <span>Categoría: Pruebas</span>
+                    </div>
+                    <h4 class="article__subtitle">
+                        <a href="#">Título de artículo 2</a>
+                    </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                </article>
+                <article class="articles__article">
+                    <div class="article__datos">
+                        <span>Fecha: 01 de marzo</span>
+                        <span>Categoría: Pruebas</span>
+                    </div>
+                    <h4 class="article__subtitle">
+                        <a href="#">Título de artículo 3</a>
+                    </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                </article>
+                <article class="articles__article">
+                    <div class="article__datos">
+                        <span>Fecha: 01 de abril</span>
+                        <span>Categoría: Pruebas</span>
+                    </div>
+                    <h4 class="article__subtitle">
+                        <a href="#">Título de artículo 4</a>
+                    </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                </article>
+                <article class="articles__article">
+                    <div class="article__datos">
+                        <span>Fecha: 01 de abril</span>
+                        <span>Categoría: Pruebas</span>
+                    </div>
+                    <h4 class="article__subtitle">
+                        <a href="#">Título de artículo 5</a>
+                    </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                </article>
+                <article class="articles__article">
+                    <div class="article__datos">
+                        <span>Fecha: 01 de abril</span>
+                        <span>Categoría: Pruebas</span>
+                    </div>
+                    <h4 class="article__subtitle">
+                        <a href="#">Título de artículo 6</a>
+                    </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                </article>
+                <article class="articles__article">
+                    <div class="article__datos">
+                        <span>Fecha: 01 de abril</span>
+                        <span>Categoría: Pruebas</span>
+                    </div>
+                    <h4 class="article__subtitle">
+                        <a href="#">Título de artículo 7</a>
+                    </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                </article>
+                <article class="articles__article">
+                    <div class="article__datos">
+                        <span>Fecha: 01 de abril</span>
+                        <span>Categoría: Pruebas</span>
+                    </div>
+                    <h4 class="article__subtitle">
+                        <a href="#">Título de artículo 8</a>
+                    </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                </article>
+                <article class="articles__article">
+                    <div class="article__datos">
+                        <span>Fecha: 01 de abril</span>
+                        <span>Categoría: Pruebas</span>
+                    </div>
+                    <h4 class="article__subtitle">
+                        <a href="#">Título de artículo 9</a>
+                    </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                </article>
+            </div>
             <article class="articles__blog">
                 <a href="#">Ir al Blog</a>
             </article>
