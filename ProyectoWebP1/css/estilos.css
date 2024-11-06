@@ -694,8 +694,9 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     margin-bottom: 15px;
 }
 
+/*Apartir de aqui cambiando los artículos de cada anime*/
 .articles__article{
-    position: relative;
+    /* position: relative; */
 
     width: 98%;
     height: auto;
@@ -706,6 +707,18 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     background: var(--color-text-white);
     color: var(--color-bg);
     box-shadow: 1px 1px 2px var(--color-box-shadow);
+}
+
+/*CSS el tamaño de cada imagen dentro del artículo*/
+.articles__article img{
+    width: 30rem;
+    height: 35rem;
+}
+
+/*CSS para la descripción de cada artículo*/
+.articles__article p{
+    font-size: 2rem;
+    text-align: justify;
 }
 
 .articles__article h4{
@@ -723,28 +736,33 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
 
 .article__datos{
     /* float: right; */
-    position: absolute;
-    right: 3.6%;/*para el toc*/
-    width: 80%;
-
+    /* position: absolute; */
+    width: 28rem;
+    text-align: center;
+    left: 0;
+    
     background-color: var(--color-box-shadow2);
     color: var(--color-text-white);
     height: 30px;
     line-height: 30px;
     margin: -10px;
+    margin-bottom: 3px;/*Para que le fecha de lanzamiento no choque con el título*/
     padding: 4px;
     font-size: 13px;
     border-radius: 0px 0px 0px 5px; /* esquina inferior izq 5px */
 }
 .article__datos span{
-    margin: 6px;
+    margin-bottom: 8px;
+}
+.article__subtitle{
+    text-align: center;
 }
 
-.article__datos p{
+/* .article__datos p{
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 15px;
-}
+} */
 
 .articles__blog{
     height: 100px;
@@ -754,7 +772,6 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     font-family: "BebasNeue";
     /* transición */
     transition: all 500ms ease-in-out;
-
 }
 .articles__blog a{
     font-family: "BebasNeue";
