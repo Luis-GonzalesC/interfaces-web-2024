@@ -140,7 +140,7 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     margin-left: 10px;
 
     /* A la hora de crear animación */
-    animation-name: giroRueda;
+    animation-name: animarImagenAnime;
     animation-duration: 2s;
     /* animation-timing-function: linear; Para que el giro sea constante */
     /* animation-iteration-count: infinite; Las veces que quiero que se repita */
@@ -148,7 +148,7 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
 }
 
 /* animación logo rueda */
-@keyframes giroRueda{
+@keyframes animarImagenAnime{
     from{
         transform: translateX(-100%);
     }
@@ -159,12 +159,12 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
 
 /* efecto de desaparece y vuelve keyframes */
 .header__logo:hover .logo__gear{
-    animation: regresaRueda 2s;
+    animation: animarImagenAnimeDerecha 2s;
 }
 
-@keyframes regresaRueda{
+@keyframes animarImagenAnimeDerecha{
     from{
-        transform: translateY(200%);
+        transform: translateX(100%);
     }
     to{
         transform: translateY(0);
@@ -294,6 +294,49 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     }
 }
 
+/*CSS DE LOS INTEGRANTES*/
+.content__integrant{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 5%;
+    background-color: var(--color-box-shadow);
+}
+.integrant__text{
+    margin-top: 3rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--color-box-shadow2);
+}
+.integrant__img{
+    margin-top: 5px;
+    /*Cambio la maquetación en flex para poder centrar las imagenes*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*Le aplico el csss a cada imagen que es hija del padre*/
+.integrant__img img{
+    border-radius: 20rem;
+    width: 16rem;
+    height: 16rem;
+    box-shadow: 4px 3px 5px var(--color-primary);
+
+}
+/*Aplicando css a cada texto de la imagen*/
+.integrant__img p{
+    font-size: 1.4rem;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.integrant__img img:hover{
+    transform: scale(1.05);
+}
+
+
 /* Tarjetas */
 .content__cards{
     display: grid;
@@ -400,11 +443,25 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     }
 }
 
+/* 
 .clearfix{
     float: none;
     clear: both;
+} */
+
+/*Ordenando la barra lateral*/
+.lateral__article {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 
+.content__lateral {
+    order: 2;
+}
+
+.content__articles {
+    order: 1;
+}
 /* Barra lateral */
 .content__lateral{
     width: 300px;
@@ -451,9 +508,14 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     background-color: transparent;
     color: var(--color-background);
     /* transición para el focus */
+    transition: all 300ms;
 }
 /* obtengo foco en input[type="text"] */
-
+.lateral__search input[type="button"]:focus{
+    font-weight: 700;
+    color: var(--color-box-shadow2);
+    /* background-color: var(--color-box-shadow); */
+}
 
 .lateral__search input[type="button"],
 .lateral__search input[type="text"]{
@@ -493,6 +555,7 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
 .lateral__login input[type="password"]:focus{
     color: var(--color-focus);
     box-shadow: 1px 1px 1px var(--color-gray) inset;
+    /* inset es interna */
 }
 
 .lateral__login .lateral-box__user,
@@ -536,12 +599,14 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     margin-left: 17px;
     margin-bottom: 20px;
     /* transición */ 
+    transition: all 300ms;
 }
 .lateral__login input[type="submit"]:hover,
 .lateral__login input[type="button"]:hover,
 .lateral__login input[type="reset"]:hover,
 .lateral__login button:hover{
     /* le incluyo una sombra */
+    box-shadow: 2px 2px 5px var(--color-primary);
 }
 
 .lateral__login a{
@@ -584,13 +649,16 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     margin-left: 70px;
     margin-top: -52px;
     cursor: pointer;
-    transform: translateX(-80%); /*lo desplazo para que cuando se lance el hover se vea el movimiento de la traslación*/
+    transform: translateX(-30%); /*lo desplazo para que cuando se lance el hover se vea el movimiento de la traslación*/
     opacity: 0; /*lo oculto*/
     /* transición el cambio */
-
+    transition: all 1s;
 }
 /* efecto hover sobre el div de lateral__social */
-
+.lateral__social div:hover .social__overlay{
+    transform: translateX(20%);
+    opacity: 1;
+}
 
 /* Artículos */
 .content__articles{
@@ -682,6 +750,7 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     text-align: center;
     font-family: "BebasNeue";
     /* transición */
+    transition: all 500ms ease-in-out;
 
 }
 .articles__blog a{
@@ -691,9 +760,38 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     color: var(--color-text-title);
     text-decoration: none;
     /* transición */
+    transition: all 500ms ease-in-out;
 }
 /* efecto de hover sobre articles__blog */
+.articles__blog:hover{
+    background-color: var(--color-bg);
+    border: 10px solid var(--color-primary);
+    border-radius: 240px;
+    box-shadow: 0px 0px 10px var(--color-gray);
+    animation: iluminacion 10s infinite linear;
+}
 
+@keyframes iluminacion{
+    0%{
+        border: 10px solid var(--color-primary);
+    }
+    25%{
+        border: 10px solid green;
+    }
+    50%{
+        border: 10px solid yellow;
+    }
+    75%{
+        border: 10px solid blue;
+    }
+    100%{
+        border: 10px solid var(--color-primary);
+    }
+}
+.articles__blog:hover a{
+    color: var(--color-text-white);
+    text-shadow: 1px 1px 1px var(--color-bg),1px 2px 1px var(--colorbg),1px 3px 1px var(--color-bg),1px 4px 1px var(--color-bg),1px 5px 1px var(--color-bg),1px 6px 1px var(--color-bg);
+}
 
 /* FOOTER */
 .content__footer{
@@ -703,7 +801,7 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     color: var(--color-text-white);
     overflow: hidden;
 }
-/*FALTAAAAAAAAAAA*/
+
 .footer__wrap{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -722,8 +820,17 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     text-decoration: none;
     color: var(--color-primary);
     /* transición */
-
+    transition: all 300ms ease-in-out;
 }
+
+.footer__list li:hover a{
+    /* padding-left: 40px; */
+    margin-left: 40px;
+    color: var(--color-text-white);
+    width: 100%;
+    /* transform: translateX(3%); */
+}
+
 .footer__title{
     display: block;
     background: url("../img/pxgray.png"), var(--color-text-white);
