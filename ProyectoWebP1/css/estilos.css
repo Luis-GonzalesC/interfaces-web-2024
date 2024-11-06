@@ -244,21 +244,23 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     height: 100px;
     border: 10px solid var(--color-text-white);
     box-shadow: 0px 0px 2px var(--color-gray);
-    background: url("../img/backbaner.png");
+    background: url("../img/banner_anime.jpg");
     background-position: -200px -200px;
     margin: 20px auto;
     overflow: hidden;
     /* animación */
     animation: fondoBaner 10s infinite linear;
-    
 }
 
 @keyframes fondoBaner {
     0%{
         background-position: 0px 0px;
     }
+    50%{
+        background-position: -20px -200px;
+    }
     100%{
-        background-position: -200px -200px;
+        background-position: 0px 0px;
     }
 }
 
@@ -299,7 +301,8 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     margin-top: 5%;
-    background-color: var(--color-box-shadow);
+    /*Verificar que color de página quiero poner*/
+    /* background-color: var(--color-box-shadow); */
 }
 .integrant__text{
     margin-top: 3rem;
