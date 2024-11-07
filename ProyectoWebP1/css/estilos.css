@@ -52,42 +52,6 @@ html{
 body{
     background: url("../img/pattern.png");
 
-    /*Caja no moradas*/
-    /* --s: 200px; 
-    --c1: #030336;
-    --c2: #00889f;
-    --c3: #344b39;
-    
-    background:
-        repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 50%) 
-        calc(var(--s)/2) calc(var(--s)*tan(30deg)/2),
-        repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 50%);
-    background-size: var(--s) calc(var(--s)*tan(30deg)); */
-
-    /*Cajas moradas     
-    --s: 275px;
-    --c1: #999ac2;
-    --c2: #5e3ea3;
-    --c3: #855aaf;
-    
-    background:
-        repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 50%) 
-        calc(var(--s)/2) calc(var(--s)*tan(30deg)/2),
-        repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 50%);
-    background-size: var(--s) calc(var(--s)*tan(30deg)); */
-
-
-    /* --s: 200px;
-    --c1: #1d1d1d;
-    --c2: #4e4f51;
-    --c3: #3c3c3c;
-    
-    background:
-        repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 50%) 
-        calc(var(--s)/2) calc(var(--s)*tan(30deg)/2),
-        repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 50%);
-    background-size: var(--s) calc(var(--s)*tan(30deg)); */
-
 }
 /* wrap queremos que los elementos "hijos" dispongan de estos estilos */
 .header__wrap, .content__wrap, .footer__wrap, .header__var{
@@ -258,6 +222,7 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     position: absolute;
     right: 3%;
 }
+
 .var__search input{
     margin: 10px;
     text-align: right;
@@ -266,17 +231,39 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     box-shadow: 2px 2px 5px var(--color-primary);
 }
 
+/*Hover a la barra de busqueda*/
 .var__search input:hover{
-    color: #00538c;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px var(--color-focus);
+    transform: scale(1.02);
+    border-color: white;
+    transition: all 300ms ease-in-out;
 }
 
 /*Efecto hover en los botones del login*/
-.var__login input:hover{
-    border-radius: 5px;
+.var__login input {
+    margin: 10px;
+    width: 120px;
+    height: 40px;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 2px 2px 5px var(--color-focus);
+    transition: all 300ms ease-in-out;
+}
+
+/* Efecto hover en los botones de login */
+.var__login input:hover {
     background-color: var(--color-background);
-    color: black;
-    transform: scale(1.1);
-    box-shadow: 2px 2px 5px var(--color-primary);
+    color: var(--color-box-shadow2);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
 }
 
 /* Maquetando el Banner */
@@ -352,7 +339,7 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
 .integrant__text{
     margin-top: 3rem;
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
     font-size: 3rem;
     text-align: center;
     color: black;
@@ -380,14 +367,25 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     justify-content: center;
     align-items: center;
 }
+
 /*Le aplico el csss a cada imagen que es hija del padre*/
 .integrant__img img{
     border-radius: 20rem;
     width: 16rem;
     height: 16rem;
     box-shadow: 4px 3px 5px var(--color-primary);
-
+    
+    animation: moverIntegrantes 5s ease-in-out;
 }
+@keyframes moverIntegrantes {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /*Aplicando css a cada texto de la imagen*/
 .integrant__img p{
     color: black;
@@ -566,11 +564,9 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     margin-bottom: 15px;
 }
 
-.lateral__title:first-child{
-    margin-top: 0px;
-}
 .lateral__title{
     border-radius: 2rem;
+    transition: all 750ms; 
     animation: iluminacion_barra_articulo 10s infinite linear;
 }
 @keyframes iluminacion_barra_articulo{
@@ -589,6 +585,11 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     100%{
         border: 7px solid var(--color-primary);
     }
+}
+
+.lateral__title:hover{
+    background-color: black;
+    color: var(--color-primary);
 }
 
 
@@ -633,15 +634,21 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
 }
 .aside-box{
     width: 85%;
-    height: 12%;
+    height: 13%;
     margin: 0px auto;
-    margin-top: 20px;
-    padding-top: 2px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
     background-color: var(--color-text-white);
     box-shadow: 0px 0px 1px rgba(0,0,0,0.3), 0px 3px 7px rgba(0,0,0,0.3), 0px 1px var(--color-text-white) inset, 0px -3px 2px rgba(0,0,0,0.3) inset;
 }
 
-.lateral__login input[type="email"],
+.lateral__videos{
+    border: none;
+    margin-bottom: 20%;
+}
+
+/* .lateral__login input[type="email"],
 .lateral__login input[type="password"]{
     display: block;
     margin: 0px auto;
@@ -653,7 +660,7 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     border-radius: 5px;
     padding-left: 30px;
     color: var(--color-gray);
-}
+} */
 .lateral__login input[type="email"]:focus,
 .lateral__login input[type="password"]:focus{
     color: var(--color-focus);
@@ -837,7 +844,6 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
 /*Apartir de aqui cambiando los artículos de cada anime*/
 .articles__article{
     /* position: relative; */
-
     width: 98%;
     height: auto;
     border: 1px solid var(--color-background);
@@ -899,7 +905,7 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     margin-bottom: 3px;/*Para que le fecha de lanzamiento no choque con el título*/
     padding: 4px;
     font-size: 13px;
-    border-radius: 0px 0px 0px 5px; /* esquina inferior izq 5px */
+    /* border-radius: 0px 0px 0px 5px; esquina inferior izq 5px */
 }
 .article__datos span{
     margin-bottom: 8px;
@@ -977,7 +983,7 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
 /* FOOTER */
 .content__footer{
     width: 100%;
-    height: 470px;
+    height: 600px;
     background-color: black;
     color: var(--color-text-white);
     overflow: hidden;
@@ -985,13 +991,14 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
 
 .footer__wrap{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px
 }
 .footer__wrap > div{
     /* float: left; */
-    width: 80%;
-    height: 370px;
-    margin: 40px;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
     text-align: center;
     color: var(--color-text-white);
     font-family: "TrebuchetMS";
@@ -1004,6 +1011,7 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     transition: all 300ms ease-in-out;
 }
 
+/* efecto de hover sobre cada li */
 .footer__list li:hover a{
     /* padding-left: 40px; */
     margin-left: 40px;
@@ -1040,7 +1048,7 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     height: 40px;
     /* transición */
 }
-/* efecto de hover sobre cada li */
+
 
 .content__footer iframe{
     width: 100%;
@@ -1058,9 +1066,92 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     width: 45px;
 }
 
+.footer__autor {
+    grid-column-start: 1; /*Inicio*/
+    grid-column-end: 4; /*Termina*/
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+    border-top: 1px solid var(--color-text-white);
+}
+
+.autor__title{
+    display: block;
+    background: url("../img/pxgray.png"), var(--color-text-white);
+    height: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: "BebasNeue";
+    font-size: 40px;
+    line-height: 55px;
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
 /* Animaciones y Transiciones
 - Propiedad Animation
 - Keyframes
 - Transitions 
 
 Indico cada punto aplicado como efecto*/
+
+
+/*RESPONSIVO*/
+/*Vista tabled*/
+@media (max-width: 1253px){
+    /*Vista del header*/
+    .header {
+        width: 100%;
+        height: 70%;
+      }
+    .header__logo{
+        margin: 0 auto;
+    }
+    .header__wrap{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .header__menu{
+        text-align: center;
+    }
+
+    /*Vista de los integrantes*/
+    .content__integrant{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*Vista del banner*/
+    .content__banner{
+        width: 120rem;
+        height: 100px;
+    }
+
+    /*VISTA DE LOS ARTICULOS CON EL ASIDE*/
+    .lateral__article{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .content__lateral{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        order: 1;
+        margin-top: 0rem;
+    }
+    /*Vista de los contenidos*/
+    .articles__articles{
+        top: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* vista móvil */
+@media (max-width: 780px){
+    
+
+}
+
