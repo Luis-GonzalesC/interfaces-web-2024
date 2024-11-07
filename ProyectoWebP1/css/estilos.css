@@ -50,10 +50,10 @@ html{
     overflow-x: hidden;
 }
 body{
-    /* background: url("../img/pattern.png"); */
+    background: url("../img/pattern.png");
 
     /*Caja no moradas*/
-    --s: 200px; 
+    /* --s: 200px; 
     --c1: #030336;
     --c2: #00889f;
     --c3: #344b39;
@@ -62,7 +62,7 @@ body{
         repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 50%) 
         calc(var(--s)/2) calc(var(--s)*tan(30deg)/2),
         repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 50%);
-    background-size: var(--s) calc(var(--s)*tan(30deg));
+    background-size: var(--s) calc(var(--s)*tan(30deg)); */
 
     /*Cajas moradas     
     --s: 275px;
@@ -87,20 +87,6 @@ body{
         calc(var(--s)/2) calc(var(--s)*tan(30deg)/2),
         repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 50%);
     background-size: var(--s) calc(var(--s)*tan(30deg)); */
-
-    /* --s: 23px;
-    --c1: #774f38;
-    --c2: #ffffff;
-    
-    --_g:radial-gradient(#0000 60%,var(--c1) 61% 63%,#0000 64% 77%,var(--c1) 78% 80%,#0000 81%);
-    --_c:,#0000 75%,var(--c2) 0;
-    background:
-        conic-gradient(at 12% 20% var(--_c)) calc(var(--s)* .44) calc(.9*var(--s)),
-        conic-gradient(at 12% 20% var(--_c)) calc(var(--s)*-.06) calc(.4*var(--s)),
-        conic-gradient(at 20% 12% var(--_c)) calc(.9*var(--s)) calc(var(--s)* .44),
-        conic-gradient(at 20% 12% var(--_c)) calc(.4*var(--s)) calc(var(--s)*-.06),
-        var(--_g),var(--_g) calc(var(--s)/2) calc(var(--s)/2) var(--c2);
-    background-size: var(--s) var(--s); */
 
 }
 /* wrap queremos que los elementos "hijos" dispongan de estos estilos */
@@ -274,9 +260,14 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
 }
 .var__search input{
     margin: 10px;
+    text-align: right;
     width: 20rem;
     height: 25px;
     box-shadow: 2px 2px 5px var(--color-primary);
+}
+
+.var__search input:hover{
+    color: #00538c;
 }
 
 /*Efecto hover en los botones del login*/
@@ -357,14 +348,30 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     /*Verificar que color de página quiero poner*/
     /* background-color: var(--color-box-shadow); */
 }
+
 .integrant__text{
     margin-top: 3rem;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
     font-size: 3rem;
     text-align: center;
-    color: var(--color-box-shadow);
+    color: black;
+    animation: moverTituloIntegrantes 2s ease-in-out;
 }
+
+@keyframes moverTituloIntegrantes {
+    0%{
+        transform: translateX(-200%) translateY(-100%);
+    }
+    50%{
+        transform: translateX(-150%) translateY(0%);
+    }
+    100%{
+        transform: translateX(0%) translateY(0%);
+    }
+}
+
+
 .integrant__img{
     margin-top: 5px;
     /*Cambio la maquetación en flex para poder centrar las imagenes*/
@@ -383,12 +390,22 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
 }
 /*Aplicando css a cada texto de la imagen*/
 .integrant__img p{
-    
-    color: var(--color-box-shadow);
+    color: black;
     font-size: 1.4rem;
     font-weight: bold;
     margin-top: 5%;
     text-align: center;
+}
+.integrant__img p:hover{
+    animation: moverTextoIntegrantes 300ms;
+}
+@keyframes moverTextoIntegrantes {
+    from{
+        transform: translateY(10%);
+    }
+    to{
+        transform: translateY(0%);
+    }
 }
 
 .integrant__img img:hover{
@@ -766,6 +783,7 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
 .articles__title{
     /*TITULO MAS QUE SOLO UN ANIME*/
     border-radius: 2rem;
+    transition: all 750ms;
     animation: iluminacion_barra_articulo 10s infinite linear;
 }
 @keyframes iluminacion_barra_articulo{
@@ -785,6 +803,12 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
         border: 7px solid var(--color-primary);
     }
 }
+
+.articles__title:hover{
+    background-color: black;
+    color: var(--color-primary);
+}
+
 
 /*DIV creado para poder gridear los section*/
 .articles__articles{
