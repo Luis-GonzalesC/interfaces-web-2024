@@ -1141,11 +1141,25 @@ Indico cada punto aplicado como efecto*/
         order: 1;
         margin-top: 0rem;
     }
+
+    /*Vista de aside */
+    .lateral__social{
+        width: 300px;
+        height: 200px;
+    }
+    
     /*Vista de los contenidos*/
     .articles__articles{
         top: 0;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lateral__box{
+        
+    }
+    .lateral__title{
+        width: 60%;
     }
 }
 
