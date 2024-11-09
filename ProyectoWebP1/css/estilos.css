@@ -330,14 +330,14 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
 /*CSS DE LOS INTEGRANTES*/
 .content__integrant{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    margin-top: 5%;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 3%;
     /*Verificar que color de página quiero poner*/
     /* background-color: var(--color-box-shadow); */
 }
 
 .integrant__text{
-    margin-top: 3rem;
+    margin-top: 10rem;
     font-weight: bold;
     /* font-family: 'Courier New', Courier, monospace; */
     font-size: 3rem;
@@ -348,16 +348,15 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
 
 @keyframes moverTituloIntegrantes {
     0%{
-        transform: translateX(-200%) translateY(-100%);
+        transform: translateX(-100%) translateY(100%);
     }
     50%{
-        transform: translateX(-150%) translateY(0%);
+        transform: translateX(20%) translateY(50%);
     }
     100%{
         transform: translateX(0%) translateY(0%);
     }
 }
-
 
 .integrant__img{
     margin-top: 5px;
@@ -469,7 +468,6 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     margin: 0px auto;
 }
 
-
 .card__category{
     width: 100%;
     height: 50px;
@@ -562,9 +560,6 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
     padding-left: 15px;
     margin-top: 30px;
     margin-bottom: 15px;
-}
-
-.lateral__title{
     border-radius: 2rem;
     transition: all 750ms; 
     animation: iluminacion_barra_articulo 10s infinite linear;
@@ -918,11 +913,15 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
 }
 @keyframes mover_titulo_articulo{
     0%{
-        transform: translateX(-20%);
+        transform: translateY(-20%);
     }
     100%{
-        transform: translateX(0%);
+        transform: translateY(0%);
     }
+}
+.articles__article:hover .article__datos{
+    background-color: var(--color-primary);
+    color: black;
 }
 
 /* .article__datos p{
@@ -992,7 +991,7 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
 .footer__wrap{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px
+    grid-gap: 20px;
 }
 .footer__wrap > div{
     /* float: left; */
@@ -1046,8 +1045,8 @@ LO QUE HAGO ES DIVIDIR EN BLOG DE LA LISTA NAVBAR
 .footer__list li a{
     display: block;
     height: 40px;
-    /* transición */
 }
+
 
 
 .content__footer iframe{
@@ -1099,7 +1098,12 @@ Indico cada punto aplicado como efecto*/
 
 /*RESPONSIVO*/
 /*Vista tabled*/
-@media (max-width: 1253px){
+@media (max-width: 1285px){
+
+    :root{
+        --mx-width: 1285px;
+    }
+
     /*Vista del header*/
     .header {
         width: 100%;
@@ -1110,7 +1114,7 @@ Indico cada punto aplicado como efecto*/
     }
     .header__wrap{
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     .header__menu{
         text-align: center;
@@ -1118,14 +1122,40 @@ Indico cada punto aplicado como efecto*/
 
     /*Vista de los integrantes*/
     .content__integrant{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .integrant__img{
+        margin: 20px;
+    }
+
+    /*Vista de las cartas*/
+    .content__cards{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-evenly;
+        margin-left: 50%;
+        margin-right: 50%;
+    }
+    .cards__card{
+        margin: 5rem;
+    }
+
+    .cards__card:nth-child(4), .cards__card:nth-child(5){
+        margin-top: -10px;
+        margin-left: 60%;
+        margin-right: 50%;
     }
 
     /*Vista del banner*/
     .content__banner{
-        width: 120rem;
+        width: 120%;
         height: 100px;
+        overflow: hidden;
     }
 
     /*VISTA DE LOS ARTICULOS CON EL ASIDE*/
@@ -1147,25 +1177,470 @@ Indico cada punto aplicado como efecto*/
         width: 300px;
         height: 200px;
     }
-    
-    /*Vista de los contenidos*/
-    .articles__articles{
-        top: 0;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
 
     .lateral__box{
+        text-align: center;
+        margin: 50px;
+        margin-top: -30px;
+    }
+
+    .lateral__box h3{
+        margin-bottom: 50px;
+    }
+    
+    .social__box a{
+        text-align: left;
+        padding: 7%;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+    .lateral__social .social__overlay{
+        margin-top: -55px;
+    }
+
+    .aside-box{
+        height: 70%;
+    }
+
+    .lateral__box:nth-child(3){
+        margin: 7.5%;
+        width: 185%;
+        margin-top: 0;
+    }
+
+    /*VISTA DE LOS VIDEOS*/
+    .lateral__videos{
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+    .lateral__videos iframe{
+        width: 90%;
+        height: 50rem;
+    }
+    
+    /*Vista de los articulos (section)*/
+    .content__articles{
+        margin: 0px auto;
+    }
+
+    .articles__articles{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+        top: 0;
+    }
+    
+    .content__articles h2{
+        width: 100%;
+        height: 75px;
+        text-align: center;
+        font-size: 40px;
+        letter-spacing: 2px;
+        margin-top: 1rem;
+    }
+    
+    /*cambiando los artículos de cada anime*/
+    .articles__article{
+        position: relative;
+        padding: 30px;   
+    }
+    
+    /*CSS el tamaño de cada imagen dentro del artículo*/
+    .articles__article img{
+        width: 40rem;
+        height: 45rem;
+    }
+
+    /*Para centar mi último artículo (no al toc)*/
+    .articles__article:nth-child(9){
+        position: relative;
+        left: 220px;
+    }
+    
+    .article__datos{
+        position: absolute;
+        width: 42rem;
+        height: 30px;
+        text-align: center;
+        top: 0px;
+        left: 0px;
+        margin: 0px;
+        margin-bottom: 0px;
+        padding: 0px;
         
     }
-    .lateral__title{
-        width: 60%;
+    .article__datos span{
+        /* margin-bottom: 8px; */
+        margin: 0 auto;
+    }
+
+    /*VISTA FOOTER*/
+    .content__footer{
+        position: relative;
+        width: 100%;
+        height: 745px;
+        overflow: hidden;
+    }
+    
+    .footer__wrap{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+    .footer__wrap > div{
+        /* float: left; */
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+        text-align: center;  
+    }
+
+    /*MENU*/
+    .footer__menuFooter h5{
+        margin: 0 auto;
+    }
+    .footer__title{
+        width: 90%;
+    }
+    /*DONDE ESTAMOS*/
+    .footer__location{
+        position: relative;
+    }
+    .footer__location iframe{
+        position: absolute;
+        left: 6%;
+        width: 80%;
+        height: 70%;
+    }
+
+    /*DESARROLLADO CON*/
+    .footer__info{
+        position: absolute;
+        top: 40rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+    }
+    
+    .footer__info h5{
+        margin: 0 auto;
+        margin-bottom: 45px;
+    }
+    
+    .footer__info div:nth-child(1) p img{
+        width: 30rem;
+    }
+    .footer__info div:nth-child(2) p img{
+        width: 7rem;
+    }
+
+    /*AUTOR*/
+    .footer__autor{
+        position: absolute;
+        top: 60rem;
+        margin-bottom: 0%;
+        width: 80%;
+    }
+
+    .footer__autor div h5{
+        margin: 0 auto;
+        width: 80%;
+    }
+    
+    .autor__title{
+        margin: 0 auto;
+        width: 80%;
+        height: auto;
     }
 }
 
 /* vista móvil */
-@media (max-width: 780px){
+@media (max-width: 600px){
+ 
+    :root{
+        --mx-width: 520px;
+    }
+
+    /*Vista del header*/
+    .header {
+        width: 100%;
+        height: 100%;
+    }
+    .header__logo{
+        margin: 0 auto;
+    }
+    .header__wrap{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .header__menu{
+        text-align: center;
+    }
+
     
+    .header__var{
+        position: relative;
+    }
+    .var__login {
+        position: absolute;
+        left: 3%;
+    }
+    .var__login input{
+        margin: 10px;
+        width: 100px;
+        height: 25px;
+    }
+    .var__search{
+        position: absolute;
+        right: 3%;
+    }
 
+    .var__search input{
+        margin: 10px;
+        text-align: right;
+        width: 20rem;
+        height: 25px;
+    }
+
+    /*Vista de los integrantes*/
+    .content__integrant{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .integrant__img{
+        margin: 20px;
+    }
+
+    /*Vista de las cartas*/
+    .content__cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-evenly;
+        margin-left: 50%;
+        margin-right: 50%;
+    }
+    .cards__card{
+        margin: 5rem;
+    }
+
+    .cards__card:nth-child(4){
+        margin: 0 auto;
+        margin-top: 16.7%;
+    }
+    .cards__card:nth-child(5){
+        margin-left: 67%;
+    }
+
+    /*Vista del banner*/
+    .content__banner{
+        position: relative;
+        width: 92%;
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .content__banner h1{
+        position: absolute;
+        left: 45px;
+    }
+
+    /*VISTA DE LOS ARTICULOS CON EL ASIDE*/
+    .lateral__article{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .content__lateral{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 60%;
+        order: 1;
+        margin-top: 0rem;
+    }
+
+    /*Vista de aside */
+    .lateral__social{
+        width: 300px;
+        height: 200px;
+    }
+
+    .lateral__box{
+        text-align: center;
+        margin: 50px;
+        margin-top: -30px;
+    }
+
+    .lateral__box h3{
+        margin-bottom: 50px;
+    }
+    
+    .social__box a{
+        text-align: left;
+        padding: 7%;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+    .lateral__social .social__overlay{
+        margin-top: -55px;
+    }
+
+    .aside-box{
+        height: 70%;
+    }
+
+    .lateral__box:nth-child(3){
+        margin: 7.5%;
+        width: 90%;
+        margin-top: 0;
+    }
+
+    /*VISTA DE LOS VIDEOS*/
+    .lateral__videos{
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+    .lateral__videos iframe{
+        width: 90%;
+        height: 40rem;
+    }
+    
+    /*Vista de los articulos (section)*/
+    .content__articles{
+        margin: 0px auto;
+    }
+
+    .articles__articles{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        top: 0;
+    }
+    /*Más que solo un anime*/
+    .content__articles h2{
+        margin-left: 50px;
+        width: 50%;        
+    }
+    
+    /*cambiando los artículos de cada anime*/
+    .articles__article{
+        position: relative;
+        margin: auto;
+        padding: 10px;
+        width: 40%;
+        margin-left: 11%;
+        margin-bottom: 8%;
+        margin-top: 1%;
+    }
+
+    .articles__article h4{
+        margin-top: 6%;
+    }
+    
+    /*CSS el tamaño de cada imagen dentro del artículo*/
+    .articles__article img{
+        margin-left: 3%;
+        width: 30rem;
+        height: 45rem;
+    }
+
+    /*Para centar mi último artículo (no al toc)*/
+    .articles__article:nth-child(9){
+        position: relative;
+        left: auto;
+    }
+    
+    .article__datos{
+        position: absolute;
+        width: 34.3rem;
+        height: 30px;
+    }
+    .article__datos span{
+        /* margin-bottom: 8px; */
+        margin: 0 auto;
+    }
+
+    /*VISTA FOOTER*/
+    .content__footer{
+        position: relative;
+        width: 100%;
+        height: 850px;
+        overflow: hidden;
+    }
+    
+    .footer__wrap{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+    .footer__wrap > div{
+        /* float: left; */
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+        text-align: center;  
+    }
+
+    /*MENU*/
+    .footer__menuFooter h5{
+        margin: 0 auto;
+    }
+    .footer__title{
+        width: 90%;
+    }
+    /*DONDE ESTAMOS*/
+    .footer__location{
+        position: relative;
+    }
+    .footer__location iframe{
+        position: absolute;
+        left: 6%;
+        width: 80%;
+        height: 70%;
+    }
+
+    /*DESARROLLADO CON*/
+    .footer__info{
+        position: absolute;
+        top: 40rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+    }
+    
+    .footer__info h5{
+        margin: 0 auto;
+        margin-bottom: 45px;
+    }
+    
+    .footer__info div:nth-child(1) p img{
+        width: 30rem;
+    }
+    .footer__info div:nth-child(2) p img{
+        width: 7rem;
+    }
+
+    /*AUTOR*/
+    .footer__autor{
+        position: absolute;
+        top: 70rem;
+        width: 80%;
+    }
+
+    .footer__autor div h5{
+        margin: 0 auto;
+        width: 80%;
+    }
+    
+    .autor__title{
+        margin: 0 auto;
+        width: 80%;
+        height: auto;
+    }
 }
-

@@ -5,8 +5,8 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <!-- user_scalable = no - es para que el usuario no pueda realizar zoom con los 2 dedos. -->
     <meta name="viewport" content="width=device-width, user-scalable=no"> 
-    <title>Proyecto Web</title>
-    <link rel="shortcut icon" href="img/supertux.png" type="image/x-icon">
+    <title>Anime</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/reset_estilos.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -46,10 +46,10 @@
     <main class="content__wrap">
         <section class="content__info">
             <!-- Integrantes del equipo -->
+            <div class="integrant__text">
+                <p>DESCUBRE A NUESTRO EQUIPO</p>
+            </div>
             <div class="content__integrant">
-                <div class="integrant__text">
-                    <p>DESCRUBRE A NUESTRO EQUIPO</p>
-                </div>
                 <div class="integrant__img">
                     <img src="img/angel.png" alt="Angel Bueno">
                     <p>Ángel Alamilla Bueno</p>
@@ -178,19 +178,20 @@
                     <div class="lateral__videos">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/KKzmOh4SuBc" title="YouTube video anime" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                </div>
-                
-                <div class="lateral__videos">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ATJYac_dORw?si=g9ZWMBmkkduHJZ_K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="lateral__videos">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gUXg7QYn_lg?si=lua0HXsMAG4MnB5t" title="YouTube video anime" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <div class="lateral__videos">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ATJYac_dORw?si=g9ZWMBmkkduHJZ_K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    
+                    <div class="lateral__videos">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUXg7QYn_lg?si=lua0HXsMAG4MnB5t" title="YouTube video anime" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
             </aside>
             <!-- fin de Aside -->
             <!-- Inicio de los Artículos -->
             <section class="content__articles">
-                <h2 class="articles__title">MAS QUE SOLO UN ANIME</h2>
+                <h2 class="articles__title">MÁS QUE SOLO UN ANIME</h2>
                 <!-- <div class="clearfix"></div> -->
                 <!-- DIV Agregador por mi -->
                 <div class="articles__articles">
@@ -319,29 +320,32 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.2996623515555!2d-4.462811723546774!3d36.69133637227841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f9c45623d2c3%3A0x7a634bd28c0cf953!2sMEDAC%20Nova%20%F0%9F%A5%87%20Centro%20Tecnol%C3%B3gico%20de%20FP!5e0!3m2!1ses!2ses!4v1698701252334!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="footer__info">
-                <h5 class="footer__title">Desarrollado con</h5>
-                <p>
-                    <img src="img/html5-badge-h-css3-graphics-multimedia-performance-semantics.png" alt="Creado con HTML y CSS">
-                </p>
-                <h5 class="footer__title">Optimizado para</h5>
-                <p class="footer__browsers">
-                    <a href="#">
-                        <img src="img/firefox-icon.png" alt="Firefox">
-                    </a>
-                    <a href="#">
-                        <img src="img/chrome.png" alt="Chrome">
-                    </a>
-                    <a href="#">
-                        <img src="img/safari.png" alt="Safari">
-                    </a>
-                    <a href="#">
-                        <img src="img/android.png" alt="Android">
-                    </a>
-                    <a href="#">
-                        <img src="img/Opera_256x256.png" alt="Opera">
-                    </a>
-                </p>
-                
+                <div>
+                    <h5 class="footer__title">Desarrollado con</h5>
+                    <p>
+                        <img src="img/html5-badge-h-css3-graphics-multimedia-performance-semantics.png" alt="Creado con HTML y CSS">
+                    </p>
+                </div>
+                <div>
+                    <h5 class="footer__title">Optimizado para</h5>
+                    <p class="footer__browsers">
+                        <a href="#">
+                            <img src="img/firefox-icon.png" alt="Firefox">
+                        </a>
+                        <a href="#">
+                            <img src="img/chrome.png" alt="Chrome">
+                        </a>
+                        <a href="#">
+                            <img src="img/safari.png" alt="Safari">
+                        </a>
+                        <a href="#">
+                            <img src="img/android.png" alt="Android">
+                        </a>
+                        <a href="#">
+                            <img src="img/Opera_256x256.png" alt="Opera">
+                        </a>
+                    </p>
+                </div>
             </div>
             <div class="footer__autor">
                 <h5 class="autor__title">AUTOR</h5>
