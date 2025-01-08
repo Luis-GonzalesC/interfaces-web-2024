@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.min.js"></script>
+    <title>Movimiento de pantalla</title>
+</head>
+<body>
+    <script>
+        $(window).resize(()=>{
+            $("body").prepend("<div>" + $(window).width() + "</div>");
+        });
+    </script>
+</body>
+</html>
