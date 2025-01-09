@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.min.js"></script>
+    <title>Creación de item</title>
+</head>
+<body>
+    <script>
+        $(document).ready(()=>{
+            $("body").append("<ul>");
+            for (let i = 0; i < 5; i++) {
+                $("ul").append(`<li id='item${i+1}'> Item ${i+1} </li>`);
+            }
+            $("body").append("</ul>");
+
+            $("#item1").css("color", "red");
+            $("#item2").remove(); //Me lo borra directamente
+            
+            /*
+            append = añade final
+            prepend = añade al principio
+            detach = lo mismo que el remove pero guarda los datos (me devuelve un objeto)
+            remove = elimina el objeto
+            css = cambiar el style 
+
+            ======================
+            eq = accede a un cajon del array
+            each = function que me recorre todo el array
+            $("p:contains('primero')") => me da solo las pe con ese primero
+            HIDE() => Oculta
+            SHOW() => Mueastra
+            toggle() => lo contrario a que muestra o oculta
+            */
+
+            $("li").eq(3).css("color", "green");
+        });
+    </script>
+</body>
+</html>

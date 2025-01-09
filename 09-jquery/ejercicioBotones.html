@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio botones</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(()=>{
+            /*$("#botones1").on("click", ()=>{
+                $("#campo").val($("#botones1").val());
+            })
+
+            $("#botones2").on("click", ()=>{
+                $("#campo").val($("#botones2").val());
+            })
+
+            $("#botones3").on("click", ()=>{
+                $("#campo").val($("#botones3").val());
+            })*/
+
+            $("input[type='button']").on("click", function(){
+                var t = $(this).val();
+                $("#campo").val(t);
+            })
+
+            //Para recorrer todos los inputs
+            $("input").each(function(){
+                alert($(this).val());
+            })
+            
+        });
+    </script>
+
+    <input type="text" name="valor" id="campo">
+    <input type="button" value="1" id="botones1">
+    <input type="button" value="2" id="botones2">
+    <input type="button" value="3" id="botones3">
+
+
+</body>
+</html>
