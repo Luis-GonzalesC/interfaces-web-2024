@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 4-Aplica un efecto de desvanecimiento al pasar el ratón sobre una imagen. (fading) -->
+     <img src="miles.jpg" alt="Imagen de Miles" class="imagen">
+     <script>
+        $(document).ready(()=>{
+            $(".imagen").mouseover(function(){
+                $(".imagen").toggle("fade");
+            });
+
+            $(".imagen").mouseout(function(){
+                $(".imagen").toggle("fade");
+            });
+        })
+     </script>
+</body>
+</html>

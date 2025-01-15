@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+    <style>
+        .animado{
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- 5-Haz que un <div> con clase .animado se deslice hacia abajo (slideDown) al hacer clic en un botón con id #slideButton. -->
+    <div class="animado"></div>
+    <button id="slideButton">Deslizar Abajo</button>
+    <button id="slideButtona">Deslizar Arriba</button>
+
+    <script>
+        $(document).ready(()=>{
+            $("#slideButton").click(()=>{
+                $(".animado").slideDown();
+            })
+
+            $("#slideButtona").click(()=>{
+                $(".animado").slideUp();
+            })
+        })
+    </script>
+</body>
+</html>

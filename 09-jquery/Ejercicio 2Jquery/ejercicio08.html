@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jquery-3.7.1.min.js"></script>
+    <title>Ejercicio 8</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- 8-Haz que un texto se deslice de izquierda a derecha usando show() y hide(). -->
+     <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+     <button id="btn1">show</button>
+     <button id="btn2">hide</button>
+     <script>
+        $(document).ready(()=>{
+            $("#btn1").on("click", ()=>{
+                $("div").hide("slide", {direction: "right"}, "slow");
+            });
+        })
+     </script>
+</body>
+</html>
+
+<!--
+    fade
+    fadeIn
+    fadeOut
+    fadeToggle
+
+    slipDown
+    animate
+    css
+    hover
+-->

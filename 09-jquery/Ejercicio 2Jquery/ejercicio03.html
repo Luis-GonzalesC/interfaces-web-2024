@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        .oculto{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 3-Haz que un elemento con clase .oculto se muestre con una animación (fadeIn) cuando se haga clic en un botón. -->
+    <div class="oculto"></div>
+    <button id="button">Presionar</button>
+    <script>
+        $(document).ready(()=>{
+            $("#button").click(()=>{
+                $(".oculto").toggle("fadeIn");
+            })
+        })
+    </script>
+</body>
+</html>

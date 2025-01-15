@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 2-Crea un efecto de deslizamiento (slideUp) para un <p> cuando el usuario haga clic en un botón. -->
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, eos beatae reiciendis recusandae illo dolorem non doloremque ipsam optio porro adipisci amet sit dolor repellat facere! Provident ea corporis natus?</p>
+    <button id="button">Presionar</button>
+    <script>
+        $(document).ready(()=>{
+            $("#button").click(()=>{
+                $("p").toggle("slideUp");
+            });
+        });
+    </script>
+</body>
+</html>
