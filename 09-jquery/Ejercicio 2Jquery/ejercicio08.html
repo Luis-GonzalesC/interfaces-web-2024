@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
     <title>Ejercicio 8</title>
     <style>
         div {
+            position: relative;
             width: 100px;
             height: 100px;
             background: #ccc;
@@ -22,8 +24,12 @@
      <script>
         $(document).ready(()=>{
             $("#btn1").on("click", ()=>{
-                $("div").hide("slide", {direction: "right"}, "slow");
+                $("div").show().animate({right: '500'}, 1000); //izquieda
             });
+
+            /*$("#btn2").on("click", ()=>{
+                $("div").hide("slide", { direction: "right"}, "slow");
+            });*/
         })
      </script>
 </body>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+    <style>
+        div{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <!-- 10-Haz que un <div> se desplace suavemente a una posición específica en la página. -->
+    <div></div>
+    <button id="btn1">Mover</button>
+    <button id="btn2">Regresar</button>
+    <script>
+        $(document).ready(()=>{
+            $("#btn1").on("click", ()=>{
+                $("div").animate({left: "500", top: "500"}, 1000);
+            });
+
+            $("#btn2").on("click", ()=>{
+                $("div").animate({left: "0", top: "0"}, 1000);
+            });
+        });
+    </script>
+</body>
+</html>

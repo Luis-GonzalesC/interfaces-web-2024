@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+    <title>Ejercicio 9</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- 9-Usa el método toggle() para alternar la visibilidad de un elemento al hacer clic. -->
+    <div>VISIBLE</div>
+    <button id="visi">Visible</button>
+    <script>
+        $(document).ready(function(){
+            $("#visi").on("click", ()=>{
+                $("div").toggle();
+            })
+        })
+    </script>
+</body>
+</html>
