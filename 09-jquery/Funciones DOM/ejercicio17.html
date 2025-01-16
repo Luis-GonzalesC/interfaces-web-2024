@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 17</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 17-Cambiar el src de una imagen con id #imagen a una nueva URL. -->
+    <img src="www.medac.es" alt="imagen" id="imagen">
+
+    <script>
+        $(document).ready(()=>{
+            $("#imagen").attr("src", "nuevo_url");
+            //attr esto para el atributo
+        });
+    </script>
+</body>
+</html>

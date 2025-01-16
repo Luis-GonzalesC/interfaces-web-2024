@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- 15-Haz que un <div> cambie de color cuando el ratón entre y vuelva al color original cuando el ratón salga. -->
+    <div></div>
+    <script>
+        $(document).ready(()=>{
+            $("div").on("mouseover", function(){
+                $(this).css("background-color", "red");
+            });
+
+            $("div").on("mouseout", function(){
+                $(this).css("background-color", "aqua");
+            });
+        })
+    </script>
+</body>
+</html>

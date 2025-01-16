@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 09</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 9-Muestra el número de caracteres restantes cuando el usuario escribe en un campo con un límite de 10 caracteres. -->
+    <input type="text">
+
+    <script>
+        $(document).ready(()=>{
+            let limite = 10;
+            $("input").on("keypress", function(){
+                limite--;
+                alert("Te queda " + limite + " caracteres restantes")
+                if(limite == 0) $(this).attr('disabled', true);
+            });
+        });
+    </script>
+</body>
+</html>

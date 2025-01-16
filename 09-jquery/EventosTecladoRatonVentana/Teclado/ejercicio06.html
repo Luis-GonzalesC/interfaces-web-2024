@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 06</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 6-Añadir un evento keydown a un campo de entrada que muestre el carácter que se ha escrito -->
+    <input type="text"> <br>
+    <input type="text" readonly>
+    <script>
+        $(document).ready(()=>{
+            $("input:eq(0)").on("keydown", (ev)=>{
+                $("input:eq(1)").val(ev.key);
+            });
+        })
+    </script>
+</body>
+</html>

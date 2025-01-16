@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 12-Añade un borde rojo a todos los elementos <h1> dentro de un <div>. -->
+    <div>
+        <h1>Esto es un h1</h1>
+        <h2>Esto es un h2</h2>
+        <h3>Esto es un h3</h3>
+        <h1>Esto es un h1</h1>
+    </div>
+    <h1>Esto es un h1 fuera del div</h1>
+
+    <script>
+        $(document).ready(()=>{
+            $("div > h1").css("border", "1px solid red");
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- 13-Detecta el movimiento del ratón sobre un área con id #contenedor y muestra las coordenadas del ratón en consola. -->
+    <div id="contenedor"></div>
+
+    <script>
+        $(document).ready(()=>{
+            $(document).on("mousemove", (ev)=>{
+                $("#contenedor").text("X: " + ev.clientX + " Y:" + ev.clientY);
+            })
+        });
+    </script>
+</body>
+</html>

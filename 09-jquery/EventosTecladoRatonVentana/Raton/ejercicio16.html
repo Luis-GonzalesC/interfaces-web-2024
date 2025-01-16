@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 16-Detecta el clic derecho del ratón sobre un <span> y muestra un mensaje. -->
+    <span>Clickeame</span>
+
+    <script>
+        $(document).ready(()=>{
+            $("span").on("contextmenu", (ev)=>{
+                ev.preventDefault();
+                alert("Se ha pulsado el click derecho y se ha quitado el menu")
+            })
+        });
+    </script>
+</body>
+</html>

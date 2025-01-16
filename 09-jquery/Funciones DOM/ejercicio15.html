@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15</title>
+    <style>
+        .activo{
+            background-color: aqua;
+        }
+    </style>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 15-Añade un class llamado activo a todos los <a> dentro de un <nav>. -->
+    <nav>
+        <a href="www.medac.es">Davante</a>
+        <h1>Esto es un h1</h1>
+        <a href="www.youtube.com">Youtube</a>
+    </nav>
+
+    <script>
+        $(document).ready(()=>{
+            $("nav > a").addClass("activo");
+        })
+    </script>
+</body>
+</html>

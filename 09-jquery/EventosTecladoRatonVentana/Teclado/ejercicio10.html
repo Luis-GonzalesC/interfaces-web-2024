@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 10-Detecta cuando el usuario presiona la tecla "Shift" y cambia el color de fondo de un <p>. -->
+    <input type="text" id="campo">
+    <p>Esto es una P que si presionas la tecla Shift cambiará su fondo</p>
+    <script>
+        $(document).ready(()=>{
+            $("#campo").on("keydown", (ev)=>{
+                if(ev.key == "Shift") $("p").css("background-color", "red");
+            });
+        });
+    </script>
+</body>
+</html>

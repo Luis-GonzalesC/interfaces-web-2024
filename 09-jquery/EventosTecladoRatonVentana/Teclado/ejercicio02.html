@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 02</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 2-Muestra un mensaje cada vez que el usuario escriba en un campo de texto con id #inputTexto. -->
+    Campo 1 <input type="text">
+    Campo 2 <input type="text" id="inputTexto">
+    Campo 3 <input type="text">
+
+    <script>
+        $(document).ready(()=>{
+            $("#inputTexto").on("keypress", function(ev){
+                alert("MENSAJE MOSTRANDO CADA QUE ESCRIBES EN EL CAMPO CON ID inputTexto");
+            })
+        })
+    </script>
+</body>
+</html>

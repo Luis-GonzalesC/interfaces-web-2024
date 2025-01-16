@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 teclado</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 1-Detecta cuando se presiona la tecla "Enter" en un <input> y muestra un mensaje en la consola. -->
+    <input type="text">
+
+
+    <script>
+        $(document).ready(()=>{
+            $("input").on("keypress", function(ev){
+                if(ev.key == "Enter") console.log($(this).val());
+            })
+        })
+    </script>
+</body>
+</html>

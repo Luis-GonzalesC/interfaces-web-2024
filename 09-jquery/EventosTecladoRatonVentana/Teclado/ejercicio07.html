@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 07</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 7-Detecta cuando se escribe en un campo con id #email y verifica si tiene un "@" y -->
+    <input type="text" id="email">
+
+    <script>
+        $(document).ready(()=>{
+            $("#email").on("keypress", (ev)=>{
+                if(ev.key == "@") alert("Acabas de poner un @");
+            });
+        })
+    </script>
+</body>
+</html>

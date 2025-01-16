@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 12-Cuando el usuario hace clic en un <button>, cambia el texto a "Clicado". -->
+    <button>Pulsa</button>
+    <script>
+        $(document).ready(()=>{
+            $("button").on("click", function(){
+                $(this).text("Clicado")
+            });
+        });
+    </script>
+</body>
+</html>

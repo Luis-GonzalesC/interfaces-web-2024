@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        div{
+            background-color: aqua;
+            width: 20px;
+            height: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 18-Establece un atributo data-id en todos los elementos con la clase .producto. -->
+    <div></div>
+    <div class="producto"></div>
+    <div></div>
+    <div class="producto"></div>
+    <div></div>
+
+    <script>
+        $(document).ready(()=>{
+            $(".producto").attr("data-id", 5);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 08</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 8-Detecta cuando se presiona una tecla en un campo de texto con id #busqueda y muestra un mensaje en consola. -->
+    Input sin id<input type="text"> <br><br>
+    Input con id<input type="text" id="busqueda"> <br><br>
+    Input sin id<input type="text"> <br><br>
+
+    <script>
+        $(document).ready(()=>{
+            $("#busqueda").on("keypress", (ev)=>{
+                alert("Acabas de escribir en un campo con el id Busqueda");
+            })
+        })
+    </script>
+</body>
+</html>

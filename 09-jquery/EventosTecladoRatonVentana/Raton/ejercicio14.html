@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 14-Haz que un <p> con clase .item se haga más grande al pasar el ratón por encima. -->
+    <p class="item">Pasa el raton por encima</p>
+    <script>
+        $(document).ready(()=>{
+            $(".item").on("mouseover", function(){
+                $(this).animate({"font-size": 50}, 1000);
+            })
+        })
+    </script>
+</body>
+</html>
