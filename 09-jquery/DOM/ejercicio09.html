@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 09</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 9-Elimina todos los elementos con la clase .eliminar. -->
+    <p class="eliminar">Esto es una p</p>
+    <span>Esto es un span</span>
+    <div class="eliminar">Esto es un div</div>
+    <p>Esto es otra p</p>
+
+    <script>
+
+        $(document).ready(()=>{
+            $(".eliminar").remove();
+        })
+    </script>
+</body>
+</html>

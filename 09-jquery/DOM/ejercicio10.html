@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 10-Selecciona todos los <span> dentro de un <div> con id #contenedor y cambia su color de fondo a gris. -->
+    <div id="contenedor">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+    </div>
+
+    <script>
+        $(document).ready(()=>{
+            $("#contenedor > span").css("background-color", "grey");
+        })
+    </script>
+</body>
+</html>

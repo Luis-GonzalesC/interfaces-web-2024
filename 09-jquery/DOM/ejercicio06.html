@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 06</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 6-Añade un nuevo elemento <li> al final de una lista con id #lista. -->
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ul>
+
+    <script>
+        $(document).ready(()=>{
+            $("ul").append("<li>d</li>");
+            //append añade por abajo (final)
+            //prepend añade por el de arriba (principio)
+        })
+    </script>
+</body>
+</html>
