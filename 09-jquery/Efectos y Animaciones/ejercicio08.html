@@ -24,12 +24,15 @@
      <script>
         $(document).ready(()=>{
             $("#btn1").on("click", ()=>{
-                $("div").show().animate({right: '500'}, 1000); //izquieda
+                //$("div").show().animate({right: '500'}, 1000); //izquieda
+                $("div").animate({left: '-500'}, 1000); //izquieda
             });
 
-            /*$("#btn2").on("click", ()=>{
-                $("div").hide("slide", { direction: "right"}, "slow");
-            });*/
+            $("#btn2").on("click", ()=>{
+                //$("div").hide("slide", { direction: "right"}, "slow");
+                $("div").animate({left: '0'}, 1000); //izquieda
+
+            });
         })
      </script>
 </body>
