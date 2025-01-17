@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 18-Detecta cuando el usuario hace doble clic sobre un <p> y cambia su texto. -->
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    
+    <script>
+        $(document).ready(()=>{
+            $("p").on("dblclick", function(){
+                $(this).text("Hiciste doble click");
+            })
+        })
+    </script>
+</body>
+</html>

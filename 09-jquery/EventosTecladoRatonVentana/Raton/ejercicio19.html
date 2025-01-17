@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 19</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+    <style>
+        body{
+            display: grid;
+        }
+        div{
+            position: relative;
+            margin: auto;
+            top: 25rem;
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <!-- 19-Haz que el contenido de un <div> se desplace hacia arriba cuando el ratón entre en el área -->
+    <div></div>
+    <script>
+        $(document).ready(()=>{
+            $("div").on("mouseenter", function(){
+                $(this).animate({top: 0}, 1000);
+
+                let top = $(this).position().top;
+                
+                if(top == 8) $(this).animate({top: 408}, 1000);
+                
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 20</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+    <style>
+        #zona{
+            width: 500px;
+            height: 500px;
+            background-color: aquamarine;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 20-Detecta cuando el ratón sale de un área con id #zona y muestra un mensaje de alerta. -->
+     <div id="zona">ZONA</div>
+     <script>
+        $(document).ready(()=>{
+            $("#zona").on("mouseout", ()=>{
+                alert("saliste");
+            })
+        })
+     </script>
+</body>
+</html>
