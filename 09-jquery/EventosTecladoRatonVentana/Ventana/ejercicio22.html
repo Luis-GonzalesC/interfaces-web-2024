@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 22</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 22-Detecta cuando la ventana se carga y cambia el fondo de la página a azul. -->
+    <script>
+        $(window).on("load", (ev)=>{
+                alert("Se ha cargao");
+                $("body").css("background-color", "blue");
+            });
+    </script>
+</body>
+</html>

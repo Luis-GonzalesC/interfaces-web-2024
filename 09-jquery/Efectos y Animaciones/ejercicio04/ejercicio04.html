@@ -11,13 +11,19 @@
      <img src="miles.jpg" alt="Imagen de Miles" class="imagen">
      <script>
         $(document).ready(()=>{
-            $(".imagen").mouseover(function(){
+            $(".imagen").hover(function(){
+                $(this).css("width", "50px");
+            }, function(){ //Se puede poner una función más como segundo parámetro de salida
+                $(this).css("width", "100px");
+            });
+
+            /*$(".imagen").mouseover(function(){
                 $(".imagen").toggle("fade");
             });
 
             $(".imagen").mouseout(function(){
                 $(".imagen").toggle("fade");
-            });
+            });*/
         })
      </script>
 </body>
