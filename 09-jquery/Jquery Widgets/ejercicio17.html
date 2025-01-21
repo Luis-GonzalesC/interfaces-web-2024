@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 17</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css">
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../jquery-ui-1.14.1.custom/jquery-ui.js"></script>
+    <style>
+        #progressbar{
+            width: 50rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 17-Usa el widget progressbar para mostrar el progreso de una acción (por ejemplo, una carga de archivo). -->
+    <div id="progressbar"></div>
+ 
+    <script>
+        $(document).ready(()=>{
+            $("#progressbar").progressbar({
+                value: false
+                //value: 50
+            });
+        })
+    </script>
+</body>
+</html>

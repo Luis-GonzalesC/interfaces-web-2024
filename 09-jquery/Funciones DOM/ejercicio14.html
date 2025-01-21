@@ -10,10 +10,12 @@
     <!-- 14-Selecciona el segundo <div> en el documento y cámbiale el fondo a amarillo. -->
     <div>Primer div</div>
     <div>Segundo div</div>
+    <div>Tercer div</div>
+    <div>Cuarto div</div>
 
     <script>
         $(document).ready(()=>{
-            $("div:eq(1)").css("background-color", "yellow");
+            $("div:nth-child(2)").css("background-color", "yellow");
             //div:nth-child(2)
             //div:eq(1)
         })

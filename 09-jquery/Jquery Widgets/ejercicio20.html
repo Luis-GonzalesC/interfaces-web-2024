@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 20</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../jquery-ui-1.14.1.custom/jquery-ui.js"></script>
+    <style>
+        #accordion{
+            width: 50rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 20- Aplica un accordion a una lista de elementos <h3> y <div>. -->
+    <div id="accordion">
+        <h3>a</h3>
+        <h3>b</h3>
+        <h3>c</h3>
+    </div>
+
+    <script>
+        $(document).ready(()=>{
+            $("#accordion").accordion();
+        })
+    </script>
+</body>
+</html>
