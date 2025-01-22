@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 24</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- 24-Haz que el contenido de un <div> se adapte al tamaño de la ventana. -->
+    <div></div>
+    <script>
+        $(document).ready(()=>{
+            $(window).on("resize",() =>{
+                $("div").css("width", $(window).width());
+                $("div").css("height", $(window).height());
+            });
+        })
+    </script>
+</body>
+</html>
