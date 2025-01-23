@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 1-Selecciona el elemento con la clase .item y cámbiale el texto. -->
+    <!-- <p class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi architecto nobis, rerum dolore neque deleniti, non, adipisci quaerat repellendus deserunt magni suscipit expedita sit aliquam eius ducimus qui eligendi quisquam?</p> -->
+
+    <!-- 2-Selecciona el primer elemento con la clase .producto y cambia su color de fondo a azul. -->
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus earum accusamus ducimus eaque animi, alias quo deserunt quas porro libero fuga fugit laborum ad corporis voluptatum sunt voluptatem id illum.</p>
+    <p class="producto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat odit voluptate qui rerum ex perspiciatis officiis provident facilis atque harum dolorem voluptates, expedita dolore inventore! Placeat dolores mollitia nostrum aut!</p> -->
+    
+    <!-- 3-Accede al primer <div> de la página y agrega el texto "Hola Mundo". -->
+    <!-- <div>Primer div de la página</div>
+    <div>Segundo div de la página</div> -->
+
+    <!-- 4-Selecciona el elemento con id #titulo y cambia su color a rojo.
+    <h1 id="titulo">Esto es un elemento título</h1> -->
+
+    <!-- 5-Accede a todos los elementos <p> en la página y cambia su tamaño de fuente a 18px. 
+    <p>Primer elemento p</p>
+    <p>Segundo elemento p</p>
+    <p>Tercer elemento p</p>-->
+
+    <!-- 6-Añade un nuevo elemento <li> al final de una lista con id #lista. 
+    <ul id="lista">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>-->
+
+    <!-- 7-Accede al contenido del elemento con id #descripcion y muestra el valor en consola. 
+    <p id="descripcion">Valores por consola</p>-->
+
+    <!-- 8-Obtén todos los elementos con la clase .carta y cambia su color de borde a verde. 
+    <div class="carta">Primer div</div>
+    <div>Segundo div</div>
+    <div>Tercer div</div>
+    <p class="carta">Esto es un p</p>-->
+
+    <!-- 9-Elimina todos los elementos con la clase .eliminar. 
+    <div class="eliminar">Primer div</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nobis facere perferendis voluptates sapiente, impedit, accusantium eligendi earum voluptas vero praesentium magni vel labore animi dignissimos nisi! Incidunt, officiis illo.</p>
+    <div class="eliminar">Segundo div</div>-->
+    <script>
+        $(document).ready(()=>{
+            /* Ejercicio 1
+            $("p").on("click", function(){
+                $(this).text("hola");
+            });*/
+
+            /* Ejercicio 2
+            $(".producto:eq(0)").css("background-color", "blue");*/
+
+            /* Ejercicio 3
+            $("div:eq(0)").text("Hola mundo");*/
+
+            /* Ejercicio 4
+            $("#titulo").css("color", "red");*/
+
+            /* Ejercicio 5
+            $("p").css("font-size", "18px");*/
+
+            /* Ejercicio 6
+            $("#lista").append("<li>5</li>");*/
+
+            /* Ejercicio 7
+            console.log($("#descripcion").text());*/
+            
+            /* Ejercicio 8
+            $(".carta").css("border", "1px solid green");*/
+
+            /* Ejercicio 9
+            $(".eliminar").remove();*/
+        })
+    </script>
+</body>
+</html>

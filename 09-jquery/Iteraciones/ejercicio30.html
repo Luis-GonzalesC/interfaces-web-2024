@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 30</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css">
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../jquery-ui-1.14.1.custom/jquery-ui.js"></script>
+    <style>
+        div{
+            width: 120px; 
+            height: 120px; 
+            background-color :orange;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 30-Haz que un elemento se desplace hacia una posición específica cuando se hace clic, usando el widget draggable. -->
+    <div></div>
+
+    <script>
+        $(document).ready(()=>{
+            $("div").on("click", function(){
+                $(this).draggable({
+                    drag: function( event, ui ) {
+                        ui.position.top = 500;
+                        ui.position.left = 500;
+                    }
+                });
+            });
+        })
+    </script>
+</body>
+</html>

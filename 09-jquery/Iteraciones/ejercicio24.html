@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 24</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css">
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../jquery-ui-1.14.1.custom/jquery-ui.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <!-- 24-Haz que un <div> sea resizable solo verticalmente. -->
+    <div></div>
+    <script>
+        $(document).ready(()=>{
+            $("div").resizable({hadnles: "s, w"});
+        })
+    </script>
+</body>
+</html>

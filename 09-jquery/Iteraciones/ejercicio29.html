@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 29</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../jquery-ui-1.14.1.custom/jquery-ui.js"></script>
+    <style>
+        #coloca{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+
+        #arrastra{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <!-- 29-Usa el widget draggable y droppable para crear un juego de tipo "arrastra y coloca". -->
+    <div id="coloca"></div>
+    <div id="arrastra"></div>
+
+    <script>
+        $(document).ready(()=>{
+            $("#coloca").droppable();
+            $("#arrastra").draggable();
+        })
+    </script>
+</body>
+</html>
