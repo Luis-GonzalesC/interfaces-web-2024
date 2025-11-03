@@ -24,7 +24,7 @@ Está organizado por unidades temáticas, cada una enfocada en una tecnología o
 | **Bootstrap**      | Framework para diseño rápido y responsivo          |
 | **jQuery**         | Interacciones dinámicas y manipulación del DOM     |
 | **JavaScript**     | Lógica de cliente y comportamiento                 |
-| **React **  | Primeros pasos en desarrollo de componentes        |
+| **React**  | Primeros pasos en desarrollo de componentes        |
 
 ---
 
